@@ -17,19 +17,87 @@
       padding: 20px;
     }
     .container { text-align: center; max-width: 400px; }
+    .icon { font-size: 4rem; margin-bottom: 1rem; }
+    .satellite {
+      display: inline-block;
+      animation: drift 3s ease-in-out infinite;
+    }
+    @keyframes drift {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(5deg); }
+    }
     h1 { font-size: 1.5rem; margin: 1rem 0; color: #ab0000; }
     p { color: #888; line-height: 1.6; }
-    .icon { font-size: 4rem; }
+    .status {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1rem;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    .status.online { border-color: #22c55e; color: #86efac; }
+    .retry-btn {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.5rem;
+      background: #ab0000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .retry-btn:hover { background: #cc0000; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="icon">📡</div>
+    <div class="icon">
+      <span class="satellite">📡</span>
+    </div>
     <h1>You're Offline</h1>
-    <p>The app needs a network connection to load for the first time.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.875rem;">
-      Once loaded, Third-Life works fully offline.
+    <p>
+      This page isn't cached yet — visit it while online to make it available offline.
     </p>
+    <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #666;">
+      Your study data is stored locally and always available.
+    </p>
+    <div class="status" id="status">
+      ⚡ Attempting to reconnect...
+    </div>
+    <button class="retry-btn" id="retryBtn" onclick="tryReconnect()">
+      Try Again
+    </button>
   </div>
+
+  <script>
+    var statusEl = document.getElementById('status');
+
+    function updateStatus(connected) {
+      if (connected) {
+        statusEl.textContent = '✓ Back online! Reloading...';
+        statusEl.className = 'status online';
+        setTimeout(function() { window.location.reload(); }, 1000);
+      } else {
+        statusEl.textContent = '⛔ Still offline. Check your connection.';
+        statusEl.className = 'status';
+      }
+    }
+
+    function tryReconnect() {
+      statusEl.textContent = '⚡ Checking connection...';
+      fetch('/manifest.webmanifest', { method: 'HEAD', cache: 'no-store' })
+        .then(function(r) { if (r.ok) updateStatus(true); else updateStatus(false); })
+        .catch(function() { updateStatus(false); });
+    }
+
+    // Auto-detect when back online
+    window.addEventListener('online', function() { updateStatus(true); });
+
+    // Try immediately in case we just came online
+    setTimeout(tryReconnect, 2000);
+  </script>
 </body>
 </html>

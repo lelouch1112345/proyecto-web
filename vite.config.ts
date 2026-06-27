@@ -8,8 +8,8 @@ export default defineConfig({
     tailwindcss(),
     sveltekit(),
     SvelteKitPWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.png', 'icons/*.png'],
+      registerType: 'prompt',
+      includeAssets: ['favicon.png', 'icons/*.png', 'offline.html'],
       manifest: {
         name: 'Third-Life — Gamified Study Plan',
         short_name: 'Third-Life',
@@ -23,17 +23,21 @@ export default defineConfig({
           {
             src: '/icons/icon-192x192.png',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any maskable'
           },
           {
             src: '/icons/icon-512x512.png',
             sizes: '512x512',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any maskable'
           }
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}']
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
+        navigateFallback: '/offline.html',
+        navigateFallbackAllowlist: [/^\/[^.]*$/]
       }
     })
   ]

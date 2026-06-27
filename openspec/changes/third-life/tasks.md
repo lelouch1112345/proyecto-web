@@ -70,11 +70,13 @@ Chain strategy: feature-branch-chain
 
 ## Phase 5: PWA
 
-- [ ] 5.1 Configure `vite-plugin-pwa` in vite.config.ts — SW source, manifest, pre-cache strategy
-- [ ] 5.2 Create `static/manifest.json` — name, icons, theme_color (#1a0000), display: standalone
-- [ ] 5.3 Generate PWA icons (192×192, 512×512) in `static/icons/`
-- [ ] 5.4 Create `static/offline.html` — minimal offline fallback with reconnect message
-- [ ] 5.5 Implement service worker update flow — skip-waiting + toast prompt to reload
+- [x] 5.1 Configure `vite-plugin-pwa` in vite.config.ts — SW source, manifest, pre-cache strategy (registerType: prompt, navigateFallback, includeAssets)
+- [x] 5.2 Create `static/manifest.json` — name, icons, theme_color (#1a0000), display: standalone
+- [x] 5.3 Generate PWA icons (192×192, 512×512) in `static/icons/`
+- [x] 5.4 Create `static/offline.html` — minimal offline fallback with reconnect message
+- [x] 5.5 Implement service worker update flow — skip-waiting + toast prompt to reload
+- [x] 5.6 Online/offline detection — status indicator in navbar, offline banner, install prompt with dismiss tracking
+- [x] 5.7 Client-side rendering — CSR via adapter-static fallback: '404.html'
 
 ## Phase 6: Polish
 
