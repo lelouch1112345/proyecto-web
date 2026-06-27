@@ -1,1 +1,80 @@
-[]
+[
+  {
+    "id": "mqvsajg4uibjc0",
+    "description": "Recurring pattern in type: read: Generated code with type errors",
+    "examples": [
+      "read: Generated code with type errors",
+      "read: Generated code with type errors",
+      "read: Generated code with type errors",
+      "read: Generated code with type errors",
+      "read: Generated code with type errors"
+    ],
+    "frequency": 97,
+    "firstSeen": 1782517492586,
+    "lastSeen": 1782529901217
+  },
+  {
+    "id": "mqvsajg40pkx4p",
+    "description": "Recurring pattern in unknown: write: {\"title\":\"openspec/config.yaml\",\"metadata\":{\"diagnostics\":{\"/home/ik/proyecto-web/openspec/config.yaml\":[{\"range\":{\"start\":{\"line\":33,\"character\":0},\"end\":{\"line\":33,\"character\":15}},\"message\":\"All ma",
+    "examples": [
+      "write: {\"title\":\"openspec/config.yaml\",\"metadata\":{\"diagnostics\":{\"/home/ik/proyecto-web/openspec/config.yaml\":[{\"range\":{\"start\":{\"line\":33,\"character\":0},\"end\":{\"line\":33,\"character\":15}},\"message\":\"All ma",
+      "task: {\"title\":\"Exploración web app gamificada\",\"metadata\":{\"parentSessionId\":\"ses_0f9afc226ffefudeNhC71vtlYL\",\"sessionId\":\"ses_0f99cc03fffelqOqU2oyZCIhjs\",\"model\":{\"providerID\":\"opencode\",\"modelID\":\"deepse",
+      "read: {\"title\":\"openspec/changes/third-life/specs/daily-dashboard/spec.md\",\"output\":\"<path>/home/ik/proyecto-web/openspec/changes/third-life/specs/daily-dashboard/spec.md</path>\\n<type>file</type>\\n<content",
+      "read: {\"title\":\"openspec/changes/third-life/specs/daily-dashboard/spec.md\",\"output\":\"<path>/home/ik/proyecto-web/openspec/changes/third-life/specs/daily-dashboard/spec.md</path>\\n<type>file</type>\\n<content",
+      "read: {\"title\":\"openspec/changes/third-life/specs/daily-dashboard/spec.md\",\"output\":\"<path>/home/ik/proyecto-web/openspec/changes/third-life/specs/daily-dashboard/spec.md</path>\\n<type>file</type>\\n<content"
+    ],
+    "frequency": 16,
+    "firstSeen": 1782518420717,
+    "lastSeen": 1782526110952
+  },
+  {
+    "id": "mqvsajg4uvui8w",
+    "description": "Recurring pattern in memory: engram_mem_search: Memory exhaustion",
+    "examples": [
+      "engram_mem_search: Memory exhaustion",
+      "read: Memory exhaustion",
+      "read: Memory exhaustion",
+      "read: Memory exhaustion",
+      "skill: Memory exhaustion"
+    ],
+    "frequency": 6,
+    "firstSeen": 1782518173914,
+    "lastSeen": 1782519785517
+  },
+  {
+    "id": "mqvsajg45hv51o",
+    "description": "Recurring pattern in package: bash: Package manager error",
+    "examples": [
+      "bash: Package manager error",
+      "bash: Package manager error",
+      "bash: Package manager error",
+      "bash: Package manager error",
+      "bash: Package manager error"
+    ],
+    "frequency": 5,
+    "firstSeen": 1782520440979,
+    "lastSeen": 1782524868017
+  },
+  {
+    "id": "mqvsajg4vtjy3r",
+    "description": "Recurring pattern in syntax: read: Generated code with syntax errors",
+    "examples": [
+      "read: Generated code with syntax errors",
+      "read: Generated code with syntax errors"
+    ],
+    "frequency": 2,
+    "firstSeen": 1782517551261,
+    "lastSeen": 1782518237395
+  },
+  {
+    "id": "mqvsajg4l1nr5n",
+    "description": "Recurring pattern in timeout: bash: Operation timed out",
+    "examples": [
+      "bash: Operation timed out",
+      "bash: Operation timed out"
+    ],
+    "frequency": 2,
+    "firstSeen": 1782526127030,
+    "lastSeen": 1782526234544
+  }
+]
