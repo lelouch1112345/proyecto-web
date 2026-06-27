@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-red-950: #1a0000;
+  --color-red-900: #2a0000;
+  --color-red-850: #3a0000;
+  --color-red-800: #4a0000;
+  --color-red-700: #6b0000;
+  --color-red-600: #8b0000;
+  --color-red-500: #ab0000;
+
+  --color-gold-500: #d4a843;
+  --color-gold-400: #e0b85a;
+  --color-gold-300: #ecc871;
+  --color-gold-200: #f8d888;
+  --color-gold-100: #ffe8a0;
+}
+
+[data-theme="third-life"] {
+  --primary: #8b0000;
+  --primary-content: #ffffff;
+  --secondary: #d4a843;
+  --secondary-content: #000000;
+  --accent: #ab0000;
+  --neutral: #1a0000;
+  --neutral-content: #ffffff;
+  --base-100: #0a0a0a;
+  --base-200: #141414;
+  --base-300: #1e1e1e;
+  --base-content: #e0e0e0;
+}

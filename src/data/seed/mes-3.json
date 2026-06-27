@@ -1,0 +1,678 @@
+{
+  "plan": {
+    "id": "mes-3",
+    "name": "Mes 3 — Consolidación",
+    "totalDays": 18,
+    "totalWeeks": 3,
+    "startDate": "",
+    "description": "Consolidation: Present Perfect, Kanji, Minor Scales, Full Review"
+  },
+  "weeks": [
+    {
+      "week": 9,
+      "phase": "Consolidation",
+      "label": "Semana 9 — Present Perfect + Kanji Números + Escala de Do Mayor",
+      "days": [
+        {
+          "day": 37,
+          "label": "Day 37",
+          "title": "Present Perfect intro + Kanji 1-5",
+          "tasks": [
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji numbers 1-5: 一二三四五",
+              "durationMin": 20,
+              "order": 1,
+              "category": "reading",
+              "detail": "Learn first 5 kanji. Each has meaning + ON reading + KUN reading. Use dual coding: write BIG, say aloud, draw in air",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "C Major scale review — full two octaves on staff",
+              "durationMin": 10,
+              "order": 2,
+              "category": "practice"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Staccato vs legato — identification drill",
+              "durationMin": 5,
+              "order": 3,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 38,
+          "label": "Day 38",
+          "title": "Present Perfect ever/never + Kanji 6-10",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Present Perfect introduction — have/has + past participle",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar",
+              "detail": "This tense doesn't exist in Spanish. Focus on the concept: experience vs specific past"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council B1 Reading — first B1 text",
+              "durationMin": 10,
+              "order": 2,
+              "category": "reading",
+              "detail": "First B1 level text. Don't expect to understand everything. Focus on getting the gist",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji numbers 6-10: 六七八九十",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Key signatures review — C Major / A minor",
+              "durationMin": 10,
+              "order": 4,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 39,
+          "label": "Day 39",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Present Perfect — ever/never questions",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Have you ever...? Q&A practice",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji 1-10 review + A wa B desu sentence structure",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 10
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "C Major scale — play + write + identify",
+              "durationMin": 10,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 40,
+          "label": "Day 40",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Present Perfect — been vs gone",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council B1 Reading — experience text",
+              "durationMin": 10,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji stroke order practice — write all 10 kanji",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Staccato in performance — identify in recordings",
+              "durationMin": 10,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 41,
+          "label": "Day 41",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Present Perfect + Past Simple contrast",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar",
+              "detail": "Key distinction: Present Perfect = experience/relevance now, Past Simple = completed past action"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Life experiences using Present Perfect",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "A wa B desu — write 5 sentences using kanji numbers",
+              "durationMin": 15,
+              "order": 3,
+              "category": "writing"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Minor scale intro — A natural minor",
+              "durationMin": 10,
+              "order": 4,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 42,
+          "label": "Day 42",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki review — week's vocabulary (25 new words)",
+              "durationMin": 10,
+              "order": 1,
+              "category": "vocab",
+              "ankiCount": 25
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji numbers complete test — recognition + writing + reading",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Week 9 Music Test — scales, staccato, key signatures",
+              "durationMin": 15,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 43,
+          "label": "Day 43",
+          "title": "Week 9 Review + Boss Battle",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Week 9 Speaking Challenge — Life experiences monologue",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking",
+              "detail": "Use Present Perfect to talk about experiences. Include ever/never, been/gone. <4 errors"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "A wa B desu — 10 sentences with kanji numbers",
+              "durationMin": 15,
+              "order": 2,
+              "category": "writing"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "A natural minor scale — write and identify",
+              "durationMin": 10,
+              "order": 3,
+              "category": "theory"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "phase": "Consolidation",
+      "label": "Semana 10 — Present Perfect Consolidation + Kanji Nature + Harmonic Minor",
+      "days": [
+        {
+          "day": 44,
+          "label": "Day 44",
+          "tasks": [
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji nature: 大小上下 (big, small, up, down)",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 4
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Present Perfect with just/already/yet",
+              "durationMin": 15,
+              "order": 2,
+              "category": "grammar"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Harmonic minor scale — A harmonic minor",
+              "durationMin": 10,
+              "order": 3,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 45,
+          "label": "Day 45",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Recent experiences with just/already/yet",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji review — 10 numbers + 4 nature kanji",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 14
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Natural vs harmonic minor — compare on staff",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 46,
+          "label": "Day 46",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council B1 Reading — travel experiences",
+              "durationMin": 10,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki review — week's vocabulary",
+              "durationMin": 10,
+              "order": 2,
+              "category": "vocab",
+              "ankiCount": 25
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Simple Japanese sentences with 大小上下",
+              "durationMin": 15,
+              "order": 3,
+              "category": "writing"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Minor scales identification — natural vs harmonic",
+              "durationMin": 10,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 47,
+          "label": "Day 47",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Present Perfect for + since (duration)",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — How long have you...? Q&A",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji: 人 (person), 子 (child), 山 (mountain), 川 (river)",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 4
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Melodic minor — A melodic minor scale",
+              "durationMin": 10,
+              "order": 4,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 48,
+          "label": "Day 48",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Present Perfect review — all uses mixed practice",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji compound words — 大きい, 小さい, 大人, 子供",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 4
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "All three minors — natural, harmonic, melodic comparison",
+              "durationMin": 10,
+              "order": 3,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 49,
+          "label": "Day 49",
+          "title": "Week 10 Review + Boss Battle",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Week 10 Speaking Challenge — 2min Present Perfect monologue",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking",
+              "detail": "Include just/already/yet, for/since, ever/never. <4 errors"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji review — all 18 kanji so far: numbers + nature + person/child/mountain/river",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 18
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Week 10 Music Test — all three minor scales",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "phase": "Consolidation",
+      "label": "Semana 11 — Full Consolidation + Final Review",
+      "days": [
+        {
+          "day": 50,
+          "label": "Day 50",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Present Perfect vs Past Simple — advanced contrast",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji: 日 (sun/day), 月 (moon/month), 火 (fire), 水 (water)",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 4
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "All scales review — C Major + A minor (natural/harmonic/melodic)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 51,
+          "label": "Day 51",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "British Council B1 Reading + Listening combo",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji compounds — 毎日, 毎月, 火曜日, 水曜日",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 4
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Sight-reading — melody with dynamics and articulation",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 52,
+          "label": "Day 52",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Mixed tenses — Present Simple, Past Simple, Present Perfect",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — 2min life story (mix all three tenses)",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Kanji review — all 22 kanji + compounds",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 22
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Full expression — sight-reading with all markings",
+              "durationMin": 10,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 53,
+          "label": "Day 53",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Error log review — all 3 months, categorize and reflect",
+              "durationMin": 15,
+              "order": 1,
+              "category": "writing",
+              "detail": "Review all L/R/D/C/F errors. Identify patterns. Write a reflection"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki review — all decks cumulative",
+              "durationMin": 15,
+              "order": 2,
+              "category": "vocab",
+              "ankiCount": 100
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Japanese review — hiragana + katakana + kanji 0-22",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Full music theory review — all clefs, scales, dynamics, articulations",
+              "durationMin": 15,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 54,
+          "label": "Day 54",
+          "title": "🎉 Month 3 Final Boss Battle — Program Completion",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Final Speaking Challenge — 5min comprehensive monologue",
+              "durationMin": 20,
+              "order": 1,
+              "category": "speaking",
+              "detail": "Tell your 3-month learning journey. Use Present Simple, Past Simple, Present Perfect. Include: what you learned, what was hard, what's next"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Final Anki review — all accumulated vocabulary (225+ words)",
+              "durationMin": 15,
+              "order": 2,
+              "category": "vocab",
+              "ankiCount": 225
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Japanese final exam — hiragana + katakana + kanji 1-22",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Music final exam — all theory, clefs, scales, dynamics, articulations",
+              "durationMin": 15,
+              "order": 4,
+              "category": "practice",
+              "detail": "Comprehensive test covering the full 3-month music curriculum"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

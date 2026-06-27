@@ -1,0 +1,669 @@
+{
+  "plan": {
+    "id": "mes-2",
+    "name": "Mes 2 — Expansión",
+    "totalDays": 18,
+    "totalWeeks": 3,
+    "startDate": "",
+    "description": "Expansion: Past Simple, Katakana, Dynamics & Tempo"
+  },
+  "weeks": [
+    {
+      "week": 5,
+      "phase": "Expansion",
+      "label": "Semana 5 — Katakana ① + Past Simple Regular + Dinámicas y Tempo",
+      "days": [
+        {
+          "day": 19,
+          "label": "Day 19",
+          "title": "Katakana アイウエオ + Past Simple intro",
+          "tasks": [
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana アイウエオ (a-i-u-e-o) — first 5 characters",
+              "durationMin": 20,
+              "order": 1,
+              "category": "reading",
+              "detail": "Katakana are angular equivalents of hiragana. Learn shapes: ア=radical A, イ=i, ウ=roof shape, エ=E-shape, オ=cross. Add to Anki 'Japonés Semana 5'",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Dynamics — p, mp, mf, f introduction",
+              "durationMin": 7,
+              "order": 2,
+              "category": "theory",
+              "detail": "Learn dynamic markings: piano (p), mezzo-piano (mp), mezzo-forte (mf), forte (f)"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "easy",
+              "description": "Tempo markings — andante, allegro, moderato",
+              "durationMin": 5,
+              "order": 3,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "C Major scale — play and write on staff",
+              "durationMin": 8,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "label": "Day 20",
+          "title": "Past Simple was/were + Katakana カキクケコ",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Past Simple — was/were introduction",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar",
+              "detail": "Learn was/were conjugations. I/he/she/it was, you/we/they were"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A2 Reading — past tense text",
+              "durationMin": 10,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana カキクケコ (ka-ki-ku-ke-ko)",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Dynamics recognition — MusicTheory.net",
+              "durationMin": 10,
+              "order": 4,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 21,
+          "label": "Day 21",
+          "tasks": [
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana サシスセソ (sa-shi-su-se-so)",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Past Simple — regular verbs (-ed pronunciation: /t/, /d/, /ɪd/)",
+              "durationMin": 15,
+              "order": 2,
+              "category": "grammar"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Tempo practice — identify tempos in sheet music",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "easy",
+              "description": "C Major scale in two octaves",
+              "durationMin": 5,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 22,
+          "label": "Day 22",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Narrate what you did yesterday (Past Simple)",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking",
+              "detail": "Record 1min about yesterday. Use was/were and regular past verbs. <4 errors goal"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana タチツテト (ta-chi-tsu-te-to)",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Dynamics + Tempo combined quiz",
+              "durationMin": 10,
+              "order": 3,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 23,
+          "label": "Day 23",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Past Simple — negative (didn't + verb)",
+              "durationMin": 10,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — What didn't you do yesterday?",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana ナニヌネノ (na-ni-nu-ne-no)",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "easy",
+              "description": "Review all dynamics + tempo markings",
+              "durationMin": 10,
+              "order": 4,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 24,
+          "label": "Day 24",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Past Simple — questions (Did + subject + verb?)",
+              "durationMin": 10,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki review — all week vocab (25 words)",
+              "durationMin": 10,
+              "order": 2,
+              "category": "vocab",
+              "ankiCount": 25
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana ハヒフヘホ (ha-hi-fu-he-ho)",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Week 5 review — dynamics + tempo + C Major",
+              "durationMin": 10,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "label": "Day 25",
+          "title": "Week 5 Review + Boss Battle",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Week 5 Speaking Challenge — 1min past narrative",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking",
+              "detail": "Narrate your entire week using Past Simple. <4 errors"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana review — 25/46 characters (ア〜ホ)",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 25
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Week 5 Music Test — dynamics, tempo, C Major scale",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "phase": "Expansion",
+      "label": "Semana 6 — Katakana ② + Past Simple Irregular + Articulación",
+      "days": [
+        {
+          "day": 26,
+          "label": "Day 26",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Past Simple — irregular verbs: go/went, eat/ate, do/did",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana マミムメモ (ma-mi-mu-me-mo) + ヤユヨ (ya-yu-yo)",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 8
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Articulation — staccato vs legato introduction",
+              "durationMin": 10,
+              "order": 3,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 27,
+          "label": "Day 27",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A2 Reading — narrative in past tense",
+              "durationMin": 10,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Irregular verbs storytelling",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana ラリルレロ (ra-ri-ru-re-ro) + ワヲン (wa-wo-n)",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 8
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Staccato practice — identify in sheet music",
+              "durationMin": 10,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 28,
+          "label": "Day 28",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Past Simple — mixed regular + irregular practice",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana ガギグゲゴ (dakuten: ga-gi-gu-ge-go)",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Articulation — Marcato + accent marks",
+              "durationMin": 10,
+              "order": 3,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 29,
+          "label": "Day 29",
+          "tasks": [
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana ザジズゼゾ + ダヂヅデド (dakuten continued)",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 10
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A1 Listening — past tense",
+              "durationMin": 10,
+              "order": 2,
+              "category": "listening"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Legato phrasing — slurs and ties",
+              "durationMin": 10,
+              "order": 3,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 30,
+          "label": "Day 30",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki review — week's vocabulary (25 words)",
+              "durationMin": 10,
+              "order": 1,
+              "category": "vocab",
+              "ankiCount": 25
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana full review — all 46 basic + dakuten",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 46
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Articulation + dynamics combined practice",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 31,
+          "label": "Day 31",
+          "title": "Week 6 Review + Boss Battle",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Week 6 Speaking Challenge — 2min past narrative",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking",
+              "detail": "Use at least 5 irregular verbs. Record and self-correct"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Katakana complete test — recognition + writing",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Week 6 Music Test — articulation + dynamics",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "phase": "Expansion",
+      "label": "Semana 7 — Past Simple Consolidation + Pitch Accent + Expressive Playing",
+      "days": [
+        {
+          "day": 32,
+          "label": "Day 32",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Past Simple — negative and question forms consolidation",
+              "durationMin": 15,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Katakana — loan words practice (コーヒー, テレビ, etc.)",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 10
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Expressive markings — crescendo, decrescendo",
+              "durationMin": 10,
+              "order": 3,
+              "category": "theory"
+            }
+          ]
+        },
+        {
+          "day": 33,
+          "label": "Day 33",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Tell a story with 5+ irregular verbs",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Japanese pitch accent basics — はし (chopsticks vs bridge)",
+              "durationMin": 15,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Crescendo/decrescendo in sheet music",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 34,
+          "label": "Day 34",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A2 Reading — past tense narrative",
+              "durationMin": 10,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Past Simple review exercises",
+              "durationMin": 10,
+              "order": 2,
+              "category": "grammar"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Katakana loan words continued + writing practice",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Full expression — dynamics + articulation + tempo",
+              "durationMin": 10,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 35,
+          "label": "Day 35",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Interview-style Q&A in past tense",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Hiragana + Katakana mixed reading practice",
+              "durationMin": 15,
+              "order": 2,
+              "category": "reading"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Sight-reading — simple melody in C Major",
+              "durationMin": 10,
+              "order": 3,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 36,
+          "label": "Day 36",
+          "title": "Month 2 Review + Boss Battle",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Month 2 Speaking Challenge — 3min past narrative",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking",
+              "detail": "Narrate your month using Past Simple. Include regular AND irregular verbs. <5 errors"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki — Month 2 full vocab review",
+              "durationMin": 10,
+              "order": 2,
+              "category": "vocab",
+              "ankiCount": 50
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "hard",
+              "description": "Month 2 Japanese Test — all katakana + pitch accent basics",
+              "durationMin": 15,
+              "order": 3,
+              "category": "reading"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Month 2 Music Test — all expressive markings + scales",
+              "durationMin": 15,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

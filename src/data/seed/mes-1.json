@@ -1,0 +1,1049 @@
+{
+  "plan": {
+    "id": "mes-1",
+    "name": "Mes 1 — Los Cimientos",
+    "totalDays": 18,
+    "totalWeeks": 3,
+    "startDate": "",
+    "description": "Foundation: English + Music (Weeks 1-2), Japanese starts Week 2"
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "phase": "Foundation",
+      "label": "Semana 1 — Los Cimientos",
+      "days": [
+        {
+          "day": 1,
+          "label": "Day 1",
+          "title": "Arranque — Inglés + Música",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A2 Reading — My Town",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "detail": "Read without stopping (5min), read calmly (5min), answer questions (5min). Add 5 new words to Anki deck 'Inglés Semana 1'",
+              "links": ["https://learnenglish.britishcouncil.org/skills/reading/a2-reading"],
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Self-introduction in the mirror",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking",
+              "detail": "Say 'Hello! My name is... I am from... I am ___ years old. Nice to meet you!' 5 times in a row. Variant: change age, city, name"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A1 Listening — Introducing a Friend",
+              "durationMin": 10,
+              "order": 3,
+              "category": "listening",
+              "detail": "1st time WITHOUT transcript, 2nd WITH transcript. Answer: name and origin. Shadowing: pick one phrase, pause, repeat with exact intonation",
+              "links": ["https://learnenglish.britishcouncil.org/skills/listening/a1-listening"]
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Minimal Pair — ship vs sheep (/ɪ/ vs /iː/)",
+              "durationMin": 3,
+              "order": 4,
+              "category": "speaking",
+              "detail": "Say 'ship' with relaxed mouth, 'sheep' smiling. Repeat each 3 times recording yourself"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki vocab — 10 cards: greetings and introductions",
+              "durationMin": 5,
+              "order": 5,
+              "category": "vocab",
+              "detail": "Deck 'Inglés Semana 1': Hello/Good morning/Good afternoon/Good evening/Goodbye/My name is/I am from/I am ___/Nice to meet you/How are you?",
+              "ankiCount": 10
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Music Theory — Notes in treble clef (Mi4-Fa5)",
+              "durationMin": 7,
+              "order": 6,
+              "category": "theory",
+              "detail": "MusicTheory.net: note identification exercise. Goal: 16/20 in <60s"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "easy",
+              "description": "Rhythm reading — whole, half, quarter, eighth notes in 4/4",
+              "durationMin": 5,
+              "order": 7,
+              "category": "practice",
+              "detail": "Clap or tap 4 measures without stopping at ♩=60"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "label": "Day 2",
+          "title": "Foundation — Building the habit",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A2 Reading — A Message to a Friend",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "detail": "Read + comprehension questions. Add 5 new words to Anki",
+              "links": ["https://learnenglish.britishcouncil.org/skills/reading/a2-reading"],
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A1 Listening — What's your name?",
+              "durationMin": 10,
+              "order": 2,
+              "category": "listening",
+              "detail": "Listen twice (1st without transcript, 2nd with). Shadow key phrases"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Self-introduction (no mirror, record audio)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "speaking",
+              "detail": "Record 1min audio introducing yourself. Listen back and note errors. Repeat"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Minimal Pair — ship/sheep + bit/beat (/ɪ/ vs /iː/)",
+              "durationMin": 3,
+              "order": 4,
+              "category": "speaking",
+              "detail": "Practice minimal pair drills. Record both and compare"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki review — all Week 1 cards so far",
+              "durationMin": 5,
+              "order": 5,
+              "category": "vocab",
+              "detail": "Review all cards in deck 'Inglés Semana 1'. Record accuracy: ___/15",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Treble clef — line and space notes (Mi4-Fa5)",
+              "durationMin": 7,
+              "order": 6,
+              "category": "theory",
+              "detail": "Flashcard drill: E4 F4 G4 A4 B4 C5 D5 E5 F5"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Rhythm clapping — dotted half + quarter in 4/4",
+              "durationMin": 5,
+              "order": 7,
+              "category": "practice",
+              "detail": "4 measures at ♩=60. Add dotted half note combinations"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "label": "Day 3",
+          "title": "Foundation — Consistency > Intensity",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A2 Reading — About my family",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Describe your family (self-recording)",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Listening — Family descriptions",
+              "durationMin": 10,
+              "order": 3,
+              "category": "listening"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Minimal Pair — fill/feel + live/leave",
+              "durationMin": 3,
+              "order": 4,
+              "category": "speaking"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki review — family vocabulary",
+              "durationMin": 5,
+              "order": 5,
+              "category": "vocab",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Treble clef practice — MusicTheory.net exercise",
+              "durationMin": 7,
+              "order": 6,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Rhythm — quarter rest + half rest in 4/4",
+              "durationMin": 5,
+              "order": 7,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "label": "Day 4",
+          "title": "Foundation — Pronunciation Focus",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Reading — British Council A2",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Record describing your room",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Listening — Descriptions of places",
+              "durationMin": 10,
+              "order": 3,
+              "category": "listening"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Minimal Pair — full/fool + pool/pull",
+              "durationMin": 3,
+              "order": 4,
+              "category": "speaking"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki review",
+              "durationMin": 5,
+              "order": 5,
+              "category": "vocab",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Treble clef — ledger lines (Mi4-Fa5)",
+              "durationMin": 7,
+              "order": 6,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Rhythm — eighth note pairs in 4/4",
+              "durationMin": 5,
+              "order": 7,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "label": "Day 5",
+          "title": "Foundation — Building fluency",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Reading — British Council A2",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — 1min monologue about hobbies",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Listening — Free time activities",
+              "durationMin": 10,
+              "order": 3,
+              "category": "listening"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Minimal Pair review — all pairs this week",
+              "durationMin": 3,
+              "order": 4,
+              "category": "speaking"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki review — week cumulative",
+              "durationMin": 5,
+              "order": 5,
+              "category": "vocab",
+              "ankiCount": 10
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Treble clef — speed drill (goal: 16/20 in <60s)",
+              "durationMin": 7,
+              "order": 6,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Rhythm — mixed note values practice",
+              "durationMin": 5,
+              "order": 7,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "label": "Day 6",
+          "title": "Foundation — Weekend consolidation",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Reading — British Council A2",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Record full self-introduction (no notes)",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Listening — Review week's listening exercises",
+              "durationMin": 10,
+              "order": 3,
+              "category": "listening"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki — full week review",
+              "durationMin": 10,
+              "order": 4,
+              "category": "vocab",
+              "ankiCount": 15
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Week review — all treble clef notes",
+              "durationMin": 10,
+              "order": 5,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Week review — all rhythm patterns",
+              "durationMin": 10,
+              "order": 6,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "label": "Day 7",
+          "title": "Week 1 Review + Boss Battle",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Week 1 Speaking Challenge — 2min self-recording",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking",
+              "detail": "Describe: yourself, your family, your room, and your hobbies. <3 errors goal"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Week 1 Error Log Review",
+              "durationMin": 10,
+              "order": 2,
+              "category": "writing",
+              "detail": "Review all errors logged this week. Categorize: L (Language), F (Focus), D (Discipline)"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki — Week 1 final review (target: 28/30)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "vocab",
+              "ankiCount": 30
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Week 1 Music Test — treble clef + rhythm",
+              "durationMin": 15,
+              "order": 4,
+              "category": "practice",
+              "detail": "MusicTheory.net test: 16/20 in <60s for notes. 4 measures rhythm at ♩=60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "phase": "Foundation",
+      "label": "Semana 2 — Expansión (日本語 arranca)",
+      "days": [
+        {
+          "day": 8,
+          "label": "Day 8",
+          "title": "Japanese joins — Three disciplines",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Present Simple — I/you/we/they grammar focus",
+              "durationMin": 10,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Daily routine with Present Simple",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Hiragana — あいうえお (a-i-u-e-o)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "reading",
+              "detail": "Learn 5 hiragana characters. Write each 10 times. Add to Anki deck 'Japonés Semana 2'",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Japanese greetings — おはよう/こんにちは/こんばんは",
+              "durationMin": 5,
+              "order": 4,
+              "category": "vocab",
+              "ankiCount": 3
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Notes in bass clef (Fa2-Do3) — introduction",
+              "durationMin": 10,
+              "order": 5,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "easy",
+              "description": "Rhythm review — Week 1 patterns + metronome",
+              "durationMin": 5,
+              "order": 6,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "label": "Day 9",
+          "title": "Consolidating three disciplines",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Present Simple — he/she/it (-s ending)",
+              "durationMin": 10,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A2 Reading",
+              "durationMin": 10,
+              "order": 2,
+              "category": "reading"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Hiragana — かきくけこ (ka-ki-ku-ke-ko)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Vocabulary — numbers 1-10 (いち/に/さん/etc)",
+              "durationMin": 5,
+              "order": 4,
+              "category": "vocab",
+              "ankiCount": 10
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Bass clef — line notes (GBDFA)",
+              "durationMin": 10,
+              "order": 5,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "easy",
+              "description": "Rhythm — 6/8 time signature intro",
+              "durationMin": 5,
+              "order": 6,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "label": "Day 10",
+          "title": "Three-discipline fluency",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "TO BE (am/is/are) — full conjugation practice",
+              "durationMin": 10,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "British Council A1 Listening",
+              "durationMin": 10,
+              "order": 2,
+              "category": "listening"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Hiragana — さしすせそ (sa-shi-su-se-so)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Vocabulary — days of the week",
+              "durationMin": 5,
+              "order": 4,
+              "category": "vocab",
+              "ankiCount": 7
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Bass clef — space notes (ACEG)",
+              "durationMin": 10,
+              "order": 5,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "easy",
+              "description": "Rhythm — 3/4 time signature (waltz)",
+              "durationMin": 5,
+              "order": 6,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "label": "Day 11",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Present Simple questions and negatives",
+              "durationMin": 10,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — 10 questions about daily routine",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Hiragana — たちつてと (ta-chi-tsu-te-to)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Vocabulary — time expressions",
+              "durationMin": 5,
+              "order": 4,
+              "category": "vocab",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Both clefs — treble + bass note drill",
+              "durationMin": 10,
+              "order": 5,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Rhythm — mixed time signatures (4/4, 3/4, 6/8)",
+              "durationMin": 5,
+              "order": 6,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "label": "Day 12",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Reading — British Council A2 (countries/cultures)",
+              "durationMin": 10,
+              "order": 1,
+              "category": "reading"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Describe a country you want to visit",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Hiragana — なにぬねの (na-ni-nu-ne-no)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Vocabulary review — all hiragana so far + numbers",
+              "durationMin": 5,
+              "order": 4,
+              "category": "vocab",
+              "ankiCount": 10
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Intervals — 2nds and 3rds on staff",
+              "durationMin": 10,
+              "order": 5,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "easy",
+              "description": "Rhythm — eighth rest practice",
+              "durationMin": 5,
+              "order": 6,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "label": "Day 13",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Reading + Listening combo — British Council",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Hiragana — はひふへほ (ha-hi-fu-he-ho)",
+              "durationMin": 10,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Self-introduction in Japanese — わたしは___です",
+              "durationMin": 5,
+              "order": 3,
+              "category": "speaking"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Intervals — 4ths and 5ths",
+              "durationMin": 10,
+              "order": 4,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Rhythm — all rests practice (whole through eighth)",
+              "durationMin": 5,
+              "order": 5,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "label": "Day 14",
+          "title": "Week 2 Review + Boss Battle",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Week 2 Speaking Challenge — Present Simple monologue",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking",
+              "detail": "2min about your daily routine using Present Simple. Record and self-correct"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Hiragana Week 2 review — all 25 characters so far",
+              "durationMin": 10,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 25
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Japanese self-introduction — record 30sec",
+              "durationMin": 5,
+              "order": 3,
+              "category": "speaking"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Week 2 Music Test — both clefs + intervals + rhythms",
+              "durationMin": 15,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "phase": "Foundation",
+      "label": "Semana 3",
+      "days": [
+        {
+          "day": 15,
+          "label": "Day 15",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Reading — British Council A2",
+              "durationMin": 10,
+              "order": 1,
+              "category": "reading"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Describe your typical weekend",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Hiragana — まみむめも (ma-mi-mu-me-mo)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Vocabulary — family members",
+              "durationMin": 5,
+              "order": 4,
+              "category": "vocab",
+              "ankiCount": 7
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Scales — C major scale on staff",
+              "durationMin": 10,
+              "order": 5,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Rhythm — sixteenth notes intro",
+              "durationMin": 5,
+              "order": 6,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "label": "Day 16",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Reading + Listening combo",
+              "durationMin": 15,
+              "order": 1,
+              "category": "reading"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Hiragana — やゆよ (ya-yu-yo) + らりるれろ (ra-ri-ru-re-ro)",
+              "durationMin": 10,
+              "order": 2,
+              "category": "reading",
+              "ankiCount": 8
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Vocabulary — common verbs (たべる/のむ/みる)",
+              "durationMin": 5,
+              "order": 3,
+              "category": "vocab",
+              "ankiCount": 5
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "C major scale — play/sing the scale",
+              "durationMin": 10,
+              "order": 4,
+              "category": "practice"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Rhythm — sixteenth + eighth combinations",
+              "durationMin": 5,
+              "order": 5,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 17,
+          "label": "Day 17",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "medium",
+              "description": "Grammar — have/has + possessive adjectives",
+              "durationMin": 10,
+              "order": 1,
+              "category": "grammar"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Speaking — Describe possessions using have/has",
+              "durationMin": 10,
+              "order": 2,
+              "category": "speaking"
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Hiragana — わをん (wa-wo-n) + 濁音 (dakuten)",
+              "durationMin": 10,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 6
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "easy",
+              "description": "Vocabulary — colors",
+              "durationMin": 5,
+              "order": 4,
+              "category": "vocab",
+              "ankiCount": 7
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Key signatures — C major / A minor",
+              "durationMin": 10,
+              "order": 5,
+              "category": "theory"
+            },
+            {
+              "discipline": "music",
+              "difficulty": "medium",
+              "description": "Rhythm — syncopation basics",
+              "durationMin": 5,
+              "order": 6,
+              "category": "practice"
+            }
+          ]
+        },
+        {
+          "day": 18,
+          "label": "Day 18",
+          "title": "Month 1 Review + Boss Battle",
+          "tasks": [
+            {
+              "discipline": "english",
+              "difficulty": "hard",
+              "description": "Month 1 Speaking Challenge — 3min monologue",
+              "durationMin": 15,
+              "order": 1,
+              "category": "speaking",
+              "detail": "Describe yourself, your routine, your family, your goals. Use Present Simple and TO BE"
+            },
+            {
+              "discipline": "english",
+              "difficulty": "easy",
+              "description": "Anki — Month 1 full vocab review",
+              "durationMin": 10,
+              "order": 2,
+              "category": "vocab",
+              "ankiCount": 50
+            },
+            {
+              "discipline": "japanese",
+              "difficulty": "medium",
+              "description": "Hiragana complete test — all 46 basic characters",
+              "durationMin": 10,
+              "order": 3,
+              "category": "reading",
+              "ankiCount": 46
+            },
+            {
+              "discipline": "music",
+              "difficulty": "hard",
+              "description": "Month 1 Music Test — all clefs, intervals, scales, rhythms",
+              "durationMin": 15,
+              "order": 4,
+              "category": "practice"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

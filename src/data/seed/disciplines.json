@@ -1,0 +1,36 @@
+{
+  "disciplines": [
+    {
+      "id": "english",
+      "name": "Inglés",
+      "nameEn": "English",
+      "emoji": "🇬🇧",
+      "color": "#3b82f6",
+      "xpMultiplier": 1.0
+    },
+    {
+      "id": "spanish",
+      "name": "Español",
+      "nameEn": "Spanish",
+      "emoji": "🇪🇸",
+      "color": "#eab308",
+      "xpMultiplier": 1.0
+    },
+    {
+      "id": "japanese",
+      "name": "日本語",
+      "nameEn": "Japanese",
+      "emoji": "🇯🇵",
+      "color": "#ef4444",
+      "xpMultiplier": 1.2
+    },
+    {
+      "id": "music",
+      "name": "Música",
+      "nameEn": "Music",
+      "emoji": "🎵",
+      "color": "#a855f7",
+      "xpMultiplier": 1.1
+    }
+  ]
+}

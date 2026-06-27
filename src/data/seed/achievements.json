@@ -1,0 +1,132 @@
+{
+  "achievements": [
+    {
+      "id": "first-steps",
+      "name": "First Steps",
+      "description": "Complete your first task",
+      "icon": "👶",
+      "category": "milestone",
+      "condition": { "type": "tasks_completed", "target": 1 }
+    },
+    {
+      "id": "week-1",
+      "name": "First Week Done",
+      "description": "Complete all tasks for one full week",
+      "icon": "📅",
+      "category": "milestone",
+      "condition": { "type": "streak_days", "target": 7 }
+    },
+    {
+      "id": "streak-7",
+      "name": "One Week Streak",
+      "description": "Maintain a 7-day streak",
+      "icon": "🔥",
+      "category": "consistency",
+      "condition": { "type": "streak_days", "target": 7 }
+    },
+    {
+      "id": "streak-14",
+      "name": "Fortnight Warrior",
+      "description": "Maintain a 14-day streak",
+      "icon": "⚔️",
+      "category": "consistency",
+      "condition": { "type": "streak_days", "target": 14 }
+    },
+    {
+      "id": "streak-30",
+      "name": "Monthly Mastery",
+      "description": "Maintain a 30-day streak",
+      "icon": "🏆",
+      "category": "consistency",
+      "condition": { "type": "streak_days", "target": 30 }
+    },
+    {
+      "id": "xp-1000",
+      "name": "Century",
+      "description": "Earn 1,000 total XP",
+      "icon": "💯",
+      "category": "milestone",
+      "condition": { "type": "total_xp", "target": 1000 }
+    },
+    {
+      "id": "xp-5000",
+      "name": "Powerhouse",
+      "description": "Earn 5,000 total XP",
+      "icon": "💪",
+      "category": "milestone",
+      "condition": { "type": "total_xp", "target": 5000 }
+    },
+    {
+      "id": "xp-10000",
+      "name": "XP Champion",
+      "description": "Earn 10,000 total XP",
+      "icon": "🏅",
+      "category": "milestone",
+      "condition": { "type": "total_xp", "target": 10000 }
+    },
+    {
+      "id": "english-dedication",
+      "name": "English Enthusiast",
+      "description": "Complete 30 English tasks",
+      "icon": "🇬🇧",
+      "category": "discipline",
+      "condition": { "type": "discipline_tasks", "target": 30, "discipline": "english" }
+    },
+    {
+      "id": "music-dedication",
+      "name": "Music Lover",
+      "description": "Complete 30 Music tasks",
+      "icon": "🎵",
+      "category": "discipline",
+      "condition": { "type": "discipline_tasks", "target": 30, "discipline": "music" }
+    },
+    {
+      "id": "japanese-dedication",
+      "name": "日本語愛好家",
+      "description": "Complete 30 Japanese tasks",
+      "icon": "🗾",
+      "category": "discipline",
+      "condition": { "type": "discipline_tasks", "target": 30, "discipline": "japanese" }
+    },
+    {
+      "id": "perfect-week",
+      "name": "Perfect Week",
+      "description": "Complete all tasks for an entire week",
+      "icon": "⭐",
+      "category": "consistency",
+      "condition": { "type": "perfect_weeks", "target": 1 }
+    },
+    {
+      "id": "perfect-month",
+      "name": "Perfect Month",
+      "description": "Complete all tasks for 4 weeks in a row",
+      "icon": "🌙",
+      "category": "consistency",
+      "condition": { "type": "perfect_weeks", "target": 4 }
+    },
+    {
+      "id": "fenix",
+      "name": "Fénix",
+      "description": "Recover from a burnout (7+ days missed)",
+      "icon": "🦅",
+      "category": "recovery",
+      "condition": { "type": "recoveries", "target": 1 }
+    },
+    {
+      "id": "checkin-master",
+      "name": "Self-Aware",
+      "description": "Complete 30 daily check-ins",
+      "icon": "🧠",
+      "category": "consistency",
+      "condition": { "type": "check_ins", "target": 30 }
+    },
+    {
+      "id": "heart-saver",
+      "name": "Heart Saver",
+      "description": "Never lose a heart for 14 days",
+      "icon": "❤️",
+      "category": "consistency",
+      "condition": { "type": "hearts_saved", "target": 14 }
+    }
+  ]
+}

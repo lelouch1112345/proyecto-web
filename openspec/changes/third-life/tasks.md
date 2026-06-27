@@ -4,7 +4,7 @@
 
 Decision needed before apply: Yes
 Chained PRs recommended: Yes
-Chain strategy: pending
+Chain strategy: feature-branch-chain
 400-line budget risk: High
 
 | Field | Value |
@@ -26,13 +26,13 @@ Chain strategy: pending
 
 ## Phase 1: Foundation
 
-- [ ] 1.1 Init SvelteKit 5 project with `adapter-static`, Tailwind 4, daisyUI, Dexie.js, Chart.js, `vite-plugin-pwa`
-- [ ] 1.2 Create `src/lib/types.ts` — all interfaces (Plan, Day, Task, TaskResult, CheckIn, XpEvent, Achievement, Hearts, Calibration)
-- [ ] 1.3 Create `src/lib/constants.ts` — XP tables, 14 level titles, heart limits, discipline multipliers
-- [ ] 1.4 Create `src/lib/db/schema.ts` — Dexie schema with 10 tables (plans, days, taskResults, checkIns, xpEvents, achievements, hearts, errorLogs, calibration, streak)
-- [ ] 1.5 Create `src/lib/db/repositories/` — plans.ts, results.ts, hearts.ts, seed.ts (CRUD + query methods)
-- [ ] 1.6 Write `scripts/convert-plans.mjs` — parse `Plan_de_Estudio/mes-*.md` → JSON seed files
-- [ ] 1.7 Create `src/data/seed/` — mes-1.json, mes-2.json, mes-3.json, achievements.json, disciplines.json
+- [x] 1.1 Init SvelteKit 5 project with `adapter-static`, Tailwind 4, daisyUI, Dexie.js, Chart.js, `vite-plugin-pwa`
+- [x] 1.2 Create `src/lib/types.ts` — all interfaces (Plan, Day, Task, TaskResult, CheckIn, XpEvent, Achievement, Hearts, Calibration)
+- [x] 1.3 Create `src/lib/constants.ts` — XP tables, 14 level titles, heart limits, discipline multipliers
+- [x] 1.4 Create `src/lib/db/schema.ts` — Dexie schema with 10 tables (plans, days, taskResults, checkIns, xpEvents, achievements, hearts, errorLogs, calibration, streak)
+- [x] 1.5 Create `src/lib/db/repositories/` — plans.ts, results.ts, hearts.ts, seed.ts (CRUD + query methods)
+- [x] 1.6 Write `scripts/convert-plans.mjs` — parse `Plan_de_Estudio/mes-*.md` → JSON seed files
+- [x] 1.7 Create `src/data/seed/` — mes-1.json, mes-2.json, mes-3.json, achievements.json, disciplines.json
 
 ## Phase 2: Gamification Engine
 

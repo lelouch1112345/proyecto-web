@@ -1,4 +1,41 @@
 {
-  "timestamp": 1782517075836,
-  "conventions": []
+  "timestamp": 1782520692830,
+  "conventions": [
+    {
+      "id": "naming-snakecase",
+      "category": "naming",
+      "pattern": "snake_case",
+      "description": "Functions and variables use snake_case naming",
+      "confidence": 0.9,
+      "examples": 15,
+      "lastSeen": 1782520690369
+    },
+    {
+      "id": "error-trycatch",
+      "category": "error-handling",
+      "pattern": "try-catch",
+      "description": "Uses try-catch blocks for error handling",
+      "confidence": 0.8,
+      "examples": 13,
+      "lastSeen": 1782520688739
+    },
+    {
+      "id": "export-named",
+      "category": "exports",
+      "pattern": "named",
+      "description": "Uses named exports exclusively",
+      "confidence": 0.6999999999999998,
+      "examples": 3,
+      "lastSeen": 1782520691066
+    },
+    {
+      "id": "export-default",
+      "category": "exports",
+      "pattern": "default",
+      "description": "Uses default exports for main module exports",
+      "confidence": 0.6999999999999998,
+      "examples": 3,
+      "lastSeen": 1782520692830
+    }
+  ]
 }
