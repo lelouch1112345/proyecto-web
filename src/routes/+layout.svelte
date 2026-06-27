@@ -51,6 +51,7 @@
           <li><a href="/progress" class="hover:text-red-400 transition-colors">Progress</a></li>
           <li><a href="/achievements" class="hover:text-red-400 transition-colors">Achievements</a></li>
           <li><a href="/recovery" class="hover:text-red-400 transition-colors">Recovery</a></li>
+          <li><a href="/error-log" class="hover:text-red-400 transition-colors">Error Log</a></li>
           <li><a href="/settings" class="hover:text-red-400 transition-colors">Settings</a></li>
         </ul>
       </div>
@@ -66,6 +67,7 @@
             <li><a href="/progress">Progress</a></li>
             <li><a href="/achievements">Achievements</a></li>
             <li><a href="/recovery">Recovery</a></li>
+            <li><a href="/error-log">Error Log</a></li>
             <li><a href="/settings">Settings</a></li>
           </ul>
         </div>

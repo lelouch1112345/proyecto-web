@@ -233,8 +233,16 @@ export const ERROR_CATEGORIES = {
   R: 'Recovery (recuperación)',
   D: 'Discipline (disciplina)',
   C: 'Calibration (calibración)',
-  F: 'Focus (enfoque)'
+  F: 'Focus (enfoque)',
+  pronunciation: 'Pronunciation',
+  grammar: 'Grammar',
+  vocabulary: 'Vocabulary',
+  kanji: 'Kanji',
+  rhythm: 'Rhythm',
+  other: 'Other'
 } as const;
+
+export const STUDY_ERROR_CATEGORIES = ['pronunciation', 'grammar', 'vocabulary', 'kanji', 'rhythm', 'other'] as const;
 
 // ──────────────────────────── Recovery Protocols ──────────────────────
 

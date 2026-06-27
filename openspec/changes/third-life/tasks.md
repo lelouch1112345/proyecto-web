@@ -63,9 +63,10 @@ Chain strategy: feature-branch-chain
 
 ## Phase 4: Extended Features
 
-- [ ] 4.1 Create `src/routes/achievements/+page.svelte` — gallery with locked/unlocked states, progress bars
-- [ ] 4.2 Create `src/routes/recovery/+page.svelte` — 3-step wizard (missed days → protocol → confirm/shift dates)
-- [ ] 4.3 Create `src/routes/settings/+page.svelte` — data export, theme toggle, plan info
+- [x] 4.1 Enhance `src/routes/achievements/+page.svelte` — gallery with sort, condition text, unlock date, unlock animation
+- [x] 4.2 Enhance `src/routes/recovery/+page.svelte` — 3-step wizard with DB integration (date shift, heart penalty, error log)
+- [x] 4.3 Enhance `src/routes/settings/+page.svelte` — data export/import, theme toggle, danger zone (reset all data)
+- [x] 4.4 Create `src/routes/error-log/+page.svelte` — table view, add error form, filter by category/date range, stats chart
 
 ## Phase 5: PWA
 
@@ -77,7 +78,7 @@ Chain strategy: feature-branch-chain
 
 ## Phase 6: Polish
 
-- [ ] 6.1 Create error log view with category filtering (L/R/D/C/F) and date sorting
-- [ ] 6.2 Implement data export (JSON download) and import in settings
+- [x] 6.1 Create error log view with category filtering (L/R/D/C/F) and date sorting
+- [x] 6.2 Implement data export (JSON download) and import in settings
 - [ ] 6.3 Add first-visit onboarding flow — highlights dashboard, explains hearts/streak/XP
 - [ ] 6.4 Build static site, verify all 5 routes load, confirm PWA install prompt fires

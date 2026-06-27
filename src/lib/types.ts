@@ -158,7 +158,7 @@ export type AchievementCategory =
 
 // ──────────────────────────── Error Log ──────────────────────────────
 
-export type ErrorCategory = 'L' | 'R' | 'D' | 'C' | 'F';
+export type ErrorCategory = 'L' | 'R' | 'D' | 'C' | 'F' | 'pronunciation' | 'grammar' | 'vocabulary' | 'kanji' | 'rhythm' | 'other';
 
 export interface ErrorLog {
   id: string;
@@ -166,6 +166,7 @@ export interface ErrorLog {
   category: ErrorCategory;
   description: string;
   details?: string;
+  correction?: string;
   resolved: boolean;
   createdAt: string; // ISO datetime
 }

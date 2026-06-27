@@ -54,6 +54,40 @@ export class SettingsRepo {
       exportedAt: new Date().toISOString()
     };
   }
+
+  /**
+   * Import all data from a JSON backup.
+   * Clears existing data before importing.
+   */
+  async importAll(data: Record<string, unknown>): Promise<void> {
+    // Clear existing data first
+    await db.plans.clear();
+    await db.days.clear();
+    await db.taskResults.clear();
+    await db.checkIns.clear();
+    await db.xpEvents.clear();
+    await db.achievements.clear();
+    await db.hearts.clear();
+    await db.errorLogs.clear();
+    await db.calibration.clear();
+    await db.streak.clear();
+    await db.settings.clear();
+
+    // Import each table if present
+    if (Array.isArray(data.plans)) for (const item of data.plans) await db.plans.put(item);
+    if (Array.isArray(data.days)) for (const item of data.days) await db.days.put(item);
+    if (Array.isArray(data.taskResults)) for (const item of data.taskResults) await db.taskResults.put(item);
+    if (Array.isArray(data.checkIns)) for (const item of data.checkIns) await db.checkIns.put(item);
+    if (Array.isArray(data.xpEvents)) for (const item of data.xpEvents) await db.xpEvents.put(item);
+    if (Array.isArray(data.achievements)) for (const item of data.achievements) await db.achievements.put(item);
+    if (Array.isArray(data.hearts)) for (const item of data.hearts) await db.hearts.put(item);
+    if (Array.isArray(data.errorLogs)) for (const item of data.errorLogs) await db.errorLogs.put(item);
+    if (Array.isArray(data.calibration)) for (const item of data.calibration) await db.calibration.put(item);
+    if (Array.isArray(data.streak)) for (const item of data.streak) await db.streak.put(item);
+    if (data.settings && typeof data.settings === 'object' && 'id' in data.settings) {
+      await db.settings.put(data.settings as import('$lib/types').Settings);
+    }
+  }
 }
 
 export const settingsRepo = new SettingsRepo();
