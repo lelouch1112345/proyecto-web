@@ -48,15 +48,18 @@ Chain strategy: feature-branch-chain
 
 ## Phase 3: Core UI
 
-- [ ] 3.1 Create `src/app.html` + `src/routes/+layout.svelte` — shell nav, dark theme, offline banner
-- [ ] 3.2 Create `src/lib/components/TaskCard.svelte` — checkbox, discipline color, timer, difficulty badge
-- [ ] 3.3 Create `src/lib/components/HeartDisplay.svelte`, `StreakBadge.svelte`, `XpBar.svelte`
-- [ ] 3.4 Create `src/lib/components/CheckInForm.svelte` — energy/focus/mood/sleep sliders
-- [ ] 3.5 Create `src/lib/components/LevelUpModal.svelte` — full-screen celebration overlay
-- [ ] 3.6 Create `src/lib/components/BossBattleWidget.svelte` — Sunday review with multiplier
-- [ ] 3.7 Create `src/lib/components/EmptyState.svelte` — reusable empty/onboarding placeholder
-- [ ] 3.8 Create `src/routes/+page.svelte` — Dashboard: today's tasks, streak, XP, hearts, timer, micro-objective
-- [ ] 3.9 Create `src/routes/progress/+page.svelte` — Chart.js: XP history, discipline radar, streak calendar, calibration
+- [x] 3.1 Create `src/app.html` + `src/routes/+layout.svelte` — shell nav, dark theme, offline banner
+- [x] 3.2 Create `src/lib/components/TaskCard.svelte` — checkbox, discipline color, timer, difficulty badge
+- [x] 3.3 Create `src/lib/components/HeartDisplay.svelte`, `StreakBadge.svelte`, `XpBar.svelte`
+- [x] 3.4 Create `src/lib/components/CheckInForm.svelte` — energy/focus/mood/sleep sliders
+- [x] 3.5 Create `src/lib/components/LevelUpModal.svelte` — full-screen celebration overlay
+- [x] 3.6 Create `src/lib/components/BossBattleWidget.svelte` — Sunday review with multiplier
+- [x] 3.7 Create `src/lib/components/EmptyState.svelte` — reusable empty/onboarding placeholder
+- [x] 3.8 Create `src/routes/+page.svelte` — Dashboard: today's tasks, streak, XP, hearts, timer, micro-objective, task completion flow, check-in
+- [x] 3.9 Create `src/routes/progress/+page.svelte` — Chart.js: XP history, discipline radar, streak calendar, calibration
+- [x] 3.10 Create `src/routes/plan/+page.svelte` — Plan calendar: month/week/day grid with colored status per day
+- [x] 3.11 Enhance `src/routes/achievements/+page.svelte` — locked/unlocked badges with progress bars
+- [x] 3.12 Create `src/lib/utils/id.ts` — genId(), today(), now() utility functions
 
 ## Phase 4: Extended Features
 
