@@ -1,5 +1,5 @@
 {
-  "timestamp": 1782520692830,
+  "timestamp": 1782524375900,
   "conventions": [
     {
       "id": "naming-snakecase",
@@ -7,8 +7,17 @@
       "pattern": "snake_case",
       "description": "Functions and variables use snake_case naming",
       "confidence": 0.9,
-      "examples": 15,
-      "lastSeen": 1782520690369
+      "examples": 16,
+      "lastSeen": 1782524375889
+    },
+    {
+      "id": "naming-camelcase",
+      "category": "naming",
+      "pattern": "camelCase",
+      "description": "Functions and variables use camelCase naming",
+      "confidence": 0.8732142857142856,
+      "examples": 111,
+      "lastSeen": 1782524375900
     },
     {
       "id": "error-trycatch",
@@ -17,25 +26,16 @@
       "description": "Uses try-catch blocks for error handling",
       "confidence": 0.8,
       "examples": 13,
-      "lastSeen": 1782520688739
+      "lastSeen": 1782524375882
     },
     {
       "id": "export-named",
       "category": "exports",
       "pattern": "named",
       "description": "Uses named exports exclusively",
-      "confidence": 0.6999999999999998,
-      "examples": 3,
-      "lastSeen": 1782520691066
-    },
-    {
-      "id": "export-default",
-      "category": "exports",
-      "pattern": "default",
-      "description": "Uses default exports for main module exports",
-      "confidence": 0.6999999999999998,
-      "examples": 3,
-      "lastSeen": 1782520692830
+      "confidence": 0.7000000000000001,
+      "examples": 10,
+      "lastSeen": 1782524375895
     }
   ]
 }
