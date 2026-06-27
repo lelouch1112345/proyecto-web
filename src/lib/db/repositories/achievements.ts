@@ -20,12 +20,11 @@ export class AchievementRepo {
    * Get unlocked achievements, ordered by unlock date.
    */
   async getUnlocked(): Promise<Achievement[]> {
-    return db.achievements
-      .filter((a) => a.unlocked)
-      .sort((a, b) => {
-        if (!a.unlockedAt || !b.unlockedAt) return 0;
-        return a.unlockedAt.localeCompare(b.unlockedAt);
-      });
+    const all = await db.achievements.filter((a) => a.unlocked).toArray();
+    return all.sort((a, b) => {
+      if (!a.unlockedAt || !b.unlockedAt) return 0;
+      return a.unlockedAt.localeCompare(b.unlockedAt);
+    });
   }
 
   /**

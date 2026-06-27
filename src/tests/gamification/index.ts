@@ -1,0 +1,2 @@
+// Gamification test barrel
+export {};

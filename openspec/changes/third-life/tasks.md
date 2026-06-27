@@ -36,15 +36,15 @@ Chain strategy: feature-branch-chain
 
 ## Phase 2: Gamification Engine
 
-- [ ] 2.1 Create `src/lib/gamification/xp.ts` — calcXP(difficulty, discipline), getLevel(totalXp), 14 level titles
-- [ ] 2.2 Create `src/lib/gamification/streak.ts` — calcStreak(history), streakFreeze logic
-- [ ] 2.3 Create `src/lib/gamification/hearts.ts` — calcHearts(state, missedDays), graceWindow, breakMode
-- [ ] 2.4 Create `src/lib/gamification/achievements.ts` — checkAchievements(events, results), progress pct
-- [ ] 2.5 Create `src/lib/gamification/boss-battle.ts` — calcBossBattle(results), 1.5× multiplier logic
-- [ ] 2.6 Create `src/lib/gamification/calibration.ts` — calcAccuracy(predicted, actual)
-- [ ] 2.7 Write `src/tests/gamification/xp.test.ts` — H1 + E1 scenarios
-- [ ] 2.8 Write `src/tests/gamification/streak.test.ts`, `hearts.test.ts`, `achievements.test.ts`
-- [ ] 2.9 Write `src/tests/db/repository.test.ts` — Dexie with fake-indexeddb
+- [x] 2.1 Create `src/lib/gamification/xp.ts` — calcXP(difficulty, discipline), getLevel(totalXp), 14 level titles, daily XP cap, streak milestone bonuses
+- [x] 2.2 Create `src/lib/gamification/streak.ts` — calcStreak(history), streakFreeze logic, freeze replenishment
+- [x] 2.3 Create `src/lib/gamification/hearts.ts` — calcHearts(state, missedDays), graceWindow, breakMode, recovery
+- [x] 2.4 Create `src/lib/gamification/achievements.ts` — checkAchievements(events, results), progress pct, initial state
+- [x] 2.5 Create `src/lib/gamification/boss-battle.ts` — calcBossBattle(results), 1.5× multiplier, pass threshold
+- [x] 2.6 Create `src/lib/gamification/calibration.ts` — calcAccuracy(predicted, actual), trend detection
+- [x] 2.7 Write `src/tests/gamification/xp.test.ts` — H1 + E1 scenarios (44 tests)
+- [x] 2.8 Write `src/tests/gamification/streak.test.ts`, `hearts.test.ts`, `achievements.test.ts` (plus boss-battle & calibration)
+- [x] 2.9 Write `src/tests/db/repository.test.ts` — Dexie with fake-indexeddb (30 tests, 7 repo patterns)
 
 ## Phase 3: Core UI
 
