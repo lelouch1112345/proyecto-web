@@ -99,11 +99,6 @@
       console.error('SW init error:', e);
     }
 
-    // Register root-level SW to fix favicon CSP (img-src data:)
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw-favicon.js', { scope: '/' })
-        .catch(() => { /* already registered or not supported */ });
-    }
   }
 </script>
 

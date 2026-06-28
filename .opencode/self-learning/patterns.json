@@ -1,6 +1,6 @@
 [
   {
-    "id": "mqvsajg4uibjc0",
+    "id": "mqx1vh46ywseh8",
     "description": "Recurring pattern in type: read: Generated code with type errors",
     "examples": [
       "read: Generated code with type errors",
@@ -9,12 +9,12 @@
       "read: Generated code with type errors",
       "read: Generated code with type errors"
     ],
-    "frequency": 97,
+    "frequency": 101,
     "firstSeen": 1782517492586,
-    "lastSeen": 1782529901217
+    "lastSeen": 1782605950186
   },
   {
-    "id": "mqvsajg40pkx4p",
+    "id": "mqx1vh46rno62v",
     "description": "Recurring pattern in unknown: write: {\"title\":\"openspec/config.yaml\",\"metadata\":{\"diagnostics\":{\"/home/ik/proyecto-web/openspec/config.yaml\":[{\"range\":{\"start\":{\"line\":33,\"character\":0},\"end\":{\"line\":33,\"character\":15}},\"message\":\"All ma",
     "examples": [
       "write: {\"title\":\"openspec/config.yaml\",\"metadata\":{\"diagnostics\":{\"/home/ik/proyecto-web/openspec/config.yaml\":[{\"range\":{\"start\":{\"line\":33,\"character\":0},\"end\":{\"line\":33,\"character\":15}},\"message\":\"All ma",
@@ -23,12 +23,12 @@
       "read: {\"title\":\"openspec/changes/third-life/specs/daily-dashboard/spec.md\",\"output\":\"<path>/home/ik/proyecto-web/openspec/changes/third-life/specs/daily-dashboard/spec.md</path>\\n<type>file</type>\\n<content",
       "read: {\"title\":\"openspec/changes/third-life/specs/daily-dashboard/spec.md\",\"output\":\"<path>/home/ik/proyecto-web/openspec/changes/third-life/specs/daily-dashboard/spec.md</path>\\n<type>file</type>\\n<content"
     ],
-    "frequency": 16,
+    "frequency": 18,
     "firstSeen": 1782518420717,
-    "lastSeen": 1782526110952
+    "lastSeen": 1782604579660
   },
   {
-    "id": "mqvsajg4uvui8w",
+    "id": "mqx1vh467cdtkq",
     "description": "Recurring pattern in memory: engram_mem_search: Memory exhaustion",
     "examples": [
       "engram_mem_search: Memory exhaustion",
@@ -42,7 +42,7 @@
     "lastSeen": 1782519785517
   },
   {
-    "id": "mqvsajg45hv51o",
+    "id": "mqx1vh46g3g787",
     "description": "Recurring pattern in package: bash: Package manager error",
     "examples": [
       "bash: Package manager error",
@@ -56,7 +56,7 @@
     "lastSeen": 1782524868017
   },
   {
-    "id": "mqvsajg4vtjy3r",
+    "id": "mqx1vh46kvgw07",
     "description": "Recurring pattern in syntax: read: Generated code with syntax errors",
     "examples": [
       "read: Generated code with syntax errors",
@@ -67,7 +67,7 @@
     "lastSeen": 1782518237395
   },
   {
-    "id": "mqvsajg4l1nr5n",
+    "id": "mqx1vh461a4h6x",
     "description": "Recurring pattern in timeout: bash: Operation timed out",
     "examples": [
       "bash: Operation timed out",
