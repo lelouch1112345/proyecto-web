@@ -56,6 +56,21 @@ export class ThirdLifeDB extends Dexie {
       streak: 'id',
       settings: 'id'
     });
+
+    // Version 3: added compound index [planId+day] for efficient day lookup
+    this.version(3).stores({
+      plans: 'id',
+      days: 'id, [planId+day], planId, day',
+      taskResults: '++id, dayId, taskId, completedAt, discipline',
+      checkIns: '++id, date',
+      xpEvents: '++id, date, source, discipline',
+      achievements: '++id, unlockedAt',
+      hearts: 'id',
+      errorLogs: '++id, category, date',
+      calibration: '++id, date',
+      streak: 'id',
+      settings: 'id'
+    });
   }
 }
 

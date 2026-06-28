@@ -80,20 +80,23 @@ describe('Full App Flow (Seed → Task → XP → Streak → Achievement)', () =
     expect(streak).toBeDefined();
     expect(streak!.current).toBe(0);
 
-    // 8. Verify settings initialized with firstRun=true
+    // 8. Verify settings initialized with defaults
     const settings = await settingsRepo.get();
     expect(settings).toBeDefined();
-    expect(settings!.firstRun).toBe(true);
+    expect(settings!.theme).toBe('red-dark');
   });
 
   it('completes a task → awards XP → updates streak → unlocks first achievement', async () => {
     // 1. Seed the database
     await importSeedData();
 
-    // 2. Get the active plan and today's day
+    // 2. Get the active plan and set a startDate so getCurrentDayNumber works
     const plan = await planRepo.getActive();
     expect(plan).toBeDefined();
+    plan!.startDate = new Date(Date.now() - 7 * 86400000).toISOString().split('T')[0];
+    await planRepo.save(plan!);
 
+    // 3. Get today's day
     const dayNumber = planRepo.getCurrentDayNumber(plan!);
     const day = await planRepo.getDay(plan!.id, dayNumber);
     expect(day).toBeDefined();
@@ -195,6 +198,8 @@ describe('Full App Flow (Seed → Task → XP → Streak → Achievement)', () =
     await importSeedData();
 
     const plan = await planRepo.getActive();
+    plan!.startDate = new Date(Date.now() - 7 * 86400000).toISOString().split('T')[0];
+    await planRepo.save(plan!);
     const dayNumber = planRepo.getCurrentDayNumber(plan!);
     const day = await planRepo.getDay(plan!.id, dayNumber);
     expect(day).toBeDefined();

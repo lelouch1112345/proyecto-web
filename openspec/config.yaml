@@ -4,11 +4,11 @@ schema: spec-driven
 
 context: |
   Project: proyecto-web
-  Stack: No code yet — pure Markdown study plans in Plan_de_Estudio/
-  Goal: Build a gamified anti-procrastination web app based on the existing study system
-  Format: 3 months, ~12 weeks, 84 days, 3 disciplines (English, Spanish, Japanese, Music)
-  Conventions: AGENTS.md at root documents study workflow and methodology
-  Architecture: TBD — currently flat markdown files, no runtime code
+  Stack: SvelteKit 5 + Dexie (IndexedDB) + Tailwind CSS 4 + Vitest
+  Goal: Gamified anti-procrastination study tracker with hearts/streaks/XP/achievements
+  Format: 115 source files, 182 Vitest integration tests
+  Conventions: AGENTS.md at root documents SDD workflow and study methodology
+  Architecture: SvelteKit SPA with IndexedDB persistence, Dexie repositories, Svelte 5 runes ($state/$derived/$effect)
 
 testing:
   strict_tdd: false

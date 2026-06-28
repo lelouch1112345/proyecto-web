@@ -41,8 +41,11 @@ export class PlanRepo {
   /**
    * Get a specific day by plan ID and day number.
    */
-  async getDay(planId: string, day: number): Promise<Day | undefined> {
-    return db.days.where({ planId, day }).first();
+  async getDay(planId: string, dayNum: number): Promise<Day | undefined> {
+    // Load plan's days and find by day number in JS.
+    // Avoids compound-index query syntax that fake-indexeddb can't handle.
+    const days = await db.days.where('planId').equals(planId).toArray();
+    return days.find((d) => d.day === dayNum);
   }
 
   /**

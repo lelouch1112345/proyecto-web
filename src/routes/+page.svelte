@@ -6,7 +6,7 @@
   import { settingsRepo } from '$lib/db';
   import type { Day, Task, Hearts, Streak, TaskResult, XpEvent, CheckIn, BossBattle, Achievement } from '$lib/types';
   import { DISCIPLINES } from '$lib/constants';
-  import { calcXP, getLevel, applyDailyXpCap } from '$lib/gamification/xp';
+  import { calcXP, applyDailyXpCap } from '$lib/gamification/xp';
   import { getLevel as getLevelData } from '$lib/gamification/xp';
   import { checkAchievements, createInitialAchievements, calcDisciplineCounts, getNewlyUnlocked } from '$lib/gamification/achievements';
   import { calcBossBattle } from '$lib/gamification/boss-battle';

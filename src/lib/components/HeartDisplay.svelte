@@ -9,9 +9,6 @@
 
   let { current, max = MAX_HEARTS, breakMode = false }: Props = $props();
 
-  $effect(() => {
-    // Reactively update when props change
-  });
 </script>
 
 <div class="flex items-center gap-0.5" title="{current}/{max} hearts">

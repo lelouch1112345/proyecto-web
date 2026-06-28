@@ -88,7 +88,7 @@
 
     function tryReconnect() {
       statusEl.textContent = '⚡ Checking connection...';
-      fetch('/manifest.webmanifest', { method: 'HEAD', cache: 'no-store' })
+      fetch('/proyecto-web/manifest.webmanifest', { method: 'HEAD', cache: 'no-store' })
         .then(function(r) { if (r.ok) updateStatus(true); else updateStatus(false); })
         .catch(function() { updateStatus(false); });
     }
