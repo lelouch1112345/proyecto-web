@@ -11,6 +11,7 @@
   import { checkAchievements, createInitialAchievements, calcDisciplineCounts, getNewlyUnlocked } from '$lib/gamification/achievements';
   import { calcBossBattle } from '$lib/gamification/boss-battle';
   import { genId, today, now } from '$lib/utils/id';
+  import { base } from '$app/paths';
 
   import HeartDisplay from '$lib/components/HeartDisplay.svelte';
   import StreakBadge from '$lib/components/StreakBadge.svelte';
@@ -338,7 +339,7 @@
     </div>
   </div>
 {:else}
-  <EmptyState icon="&#128203;" title="No tasks scheduled" description="Enjoy your rest day!" action={{ label: 'Go to Plan', href: '/plan' }} />
+  <EmptyState icon="&#128203;" title="No tasks scheduled" description="Enjoy your rest day!" action={{ label: 'Go to Plan', href: `${base}/plan` }} />
 {/if}
 
 <!-- Level Up Modal -->
