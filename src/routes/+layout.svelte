@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   import { isSeeded, importSeedData } from '$lib/db/repositories';
   import { registerSW } from 'virtual:pwa-register';
 
@@ -165,19 +166,19 @@
 
     <nav class="navbar bg-base-200 border-b border-red-900/30 px-4">
       <div class="navbar-start">
-        <a href="/" class="btn btn-ghost text-xl font-bold tracking-tight">
+        <a href={base} class="btn btn-ghost text-xl font-bold tracking-tight">
           <span class="text-red-500">✦</span>
           <span class="ml-1">Third-Life</span>
         </a>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 text-sm gap-1">
-          <li><a href="/" class="hover:text-red-400 transition-colors">Dashboard</a></li>
-          <li><a href="/progress" class="hover:text-red-400 transition-colors">Progress</a></li>
-          <li><a href="/achievements" class="hover:text-red-400 transition-colors">Achievements</a></li>
-          <li><a href="/recovery" class="hover:text-red-400 transition-colors">Recovery</a></li>
-          <li><a href="/error-log" class="hover:text-red-400 transition-colors">Error Log</a></li>
-          <li><a href="/settings" class="hover:text-red-400 transition-colors">Settings</a></li>
+          <li><a href={base} class="hover:text-red-400 transition-colors">Dashboard</a></li>
+          <li><a href="{base}/progress" class="hover:text-red-400 transition-colors">Progress</a></li>
+          <li><a href="{base}/achievements" class="hover:text-red-400 transition-colors">Achievements</a></li>
+          <li><a href="{base}/recovery" class="hover:text-red-400 transition-colors">Recovery</a></li>
+          <li><a href="{base}/error-log" class="hover:text-red-400 transition-colors">Error Log</a></li>
+          <li><a href="{base}/settings" class="hover:text-red-400 transition-colors">Settings</a></li>
         </ul>
       </div>
       <div class="navbar-end flex items-center gap-2">
@@ -193,12 +194,12 @@
             </svg>
           </button>
           <ul class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-52 p-2 shadow-xl border border-red-900/30">
-            <li><a href="/">Dashboard</a></li>
-            <li><a href="/progress">Progress</a></li>
-            <li><a href="/achievements">Achievements</a></li>
-            <li><a href="/recovery">Recovery</a></li>
-            <li><a href="/error-log">Error Log</a></li>
-            <li><a href="/settings">Settings</a></li>
+            <li><a href={base}>Dashboard</a></li>
+            <li><a href="{base}/progress">Progress</a></li>
+            <li><a href="{base}/achievements">Achievements</a></li>
+            <li><a href="{base}/recovery">Recovery</a></li>
+            <li><a href="{base}/error-log">Error Log</a></li>
+            <li><a href="{base}/settings">Settings</a></li>
           </ul>
         </div>
       </div>

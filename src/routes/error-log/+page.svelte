@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   import { errorLogRepo } from '$lib/db';
   import { ERROR_CATEGORIES, STUDY_ERROR_CATEGORIES } from '$lib/constants';
   import type { ErrorLog, ErrorCategory } from '$lib/types';
@@ -397,7 +398,7 @@
     </div>
 
     <div class="text-center mt-2">
-      <a href="/" class="btn btn-outline btn-error btn-sm">Back to Dashboard</a>
+      <a href={base} class="btn btn-outline btn-error btn-sm">Back to Dashboard</a>
     </div>
   {/if}
 </div>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   import { resultRepo, calibrationRepo } from '$lib/db';
   import type { XpEvent, Calibration } from '$lib/types';
   import { getLevel } from '$lib/gamification/xp';
@@ -394,7 +395,7 @@
     </div>
 
     <div class="text-center mt-4">
-      <a href="/" class="btn btn-outline btn-error">Back to Dashboard</a>
+      <a href={base} class="btn btn-outline btn-error">Back to Dashboard</a>
     </div>
   {/if}
 </div>

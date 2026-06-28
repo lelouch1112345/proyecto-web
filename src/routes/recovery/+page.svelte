@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   import { planRepo, heartRepo, errorLogRepo } from '$lib/db';
   import { RECOVERY_PROTOCOLS, GRACE_WINDOW_HOURS } from '$lib/constants';
   import { genId, today, now } from '$lib/utils/id';
@@ -233,7 +234,7 @@
         Recovery logged to error log (category R). Heart penalty applied.
       </p>
       <div class="flex gap-3 justify-center">
-        <a href="/" class="btn btn-error">Back to Dashboard</a>
+        <a href={base} class="btn btn-error">Back to Dashboard</a>
         <button class="btn btn-outline btn-error" onclick={handleReset}>Start Over</button>
       </div>
     </div>

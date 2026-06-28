@@ -9,6 +9,7 @@ export default defineConfig({
     sveltekit(),
     SvelteKitPWA({
       registerType: 'prompt',
+      base: '/proyecto-web/',
       includeAssets: ['favicon.png', 'icons/*.png', 'offline.html'],
       manifest: {
         name: 'Third-Life — Gamified Study Plan',
@@ -17,17 +18,17 @@ export default defineConfig({
         theme_color: '#1a0000',
         background_color: '#0a0a0a',
         display: 'standalone',
-        scope: '/',
-        start_url: '/',
+        scope: '/proyecto-web/',
+        start_url: '/proyecto-web/',
         icons: [
           {
-            src: '/icons/icon-192x192.png',
+            src: '/proyecto-web/icons/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: '/icons/icon-512x512.png',
+            src: '/proyecto-web/icons/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
@@ -36,7 +37,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
-        navigateFallback: '/offline.html',
+        navigateFallback: '/proyecto-web/offline.html',
         navigateFallbackAllowlist: [/^\/[^.]*$/]
       }
     })

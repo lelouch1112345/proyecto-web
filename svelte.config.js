@@ -6,6 +6,12 @@ const config = {
   preprocess: vitePreprocess(),
 
   kit: {
+    paths: {
+      base: '/proyecto-web'
+    },
+    prerender: {
+      handleHttpError: 'warn'
+    },
     adapter: adapter({
       pages: 'build',
       assets: 'build',

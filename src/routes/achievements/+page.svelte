@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   import { achievementRepo } from '$lib/db';
   import type { Achievement } from '$lib/types';
   import { ACHIEVEMENT_DEFINITIONS } from '$lib/constants';
@@ -117,7 +118,7 @@
     <div class="flex flex-col items-center justify-center h-64 text-center">
       <div class="text-6xl mb-4">&#127942;</div>
       <p class="text-gray-400 text-lg">Complete your first tasks to earn achievements!</p>
-      <a href="/" class="btn btn-outline btn-error mt-4">Go to Dashboard</a>
+      <a href={base} class="btn btn-outline btn-error mt-4">Go to Dashboard</a>
     </div>
   {:else}
     <!-- Stats bar -->
