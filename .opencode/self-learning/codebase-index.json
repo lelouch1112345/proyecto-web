@@ -1,5 +1,5 @@
 {
-  "timestamp": 1782602403945,
+  "timestamp": 1782606006751,
   "root": "/home/ik/proyecto-web",
   "projectType": "node",
   "framework": "svelte",
@@ -45,20 +45,20 @@
       "build/_app/immutable/entry/",
       "build/_app/immutable/nodes/",
       "build/_app/version.json",
+      "build/achievements.html",
+      "build/error-log.html",
+      "build/favicon.ico",
+      "build/favicon.png",
       "build/icons/",
       "build/icons/icon-192x192.png",
       "build/icons/icon-512x512.png",
+      "build/index.html",
       "build/manifest.json",
       "build/manifest.webmanifest",
       "build/offline.html",
-      "build/sw.js",
-      "build/workbox-2fbc6a65.js",
-      "openspec/",
-      "openspec/changes/",
-      "openspec/changes/archive/",
-      "openspec/changes/archive/2026-06-26-third-life/",
-      "openspec/changes/third-life/",
-      "openspec/changes/third-life/design.md"
+      "build/plan.html",
+      "build/progress.html",
+      "build/recovery.html"
     ]
   },
   "dependencies": {
@@ -85,13 +85,13 @@
     "vitest": "^4.1.9"
   },
   "stats": {
-    "totalFiles": 106,
+    "totalFiles": 115,
     "totalDirs": 47,
     "languages": {
       "md": 35,
       "Plan_de_Estudio/": 1,
       "build/": 1,
-      "html": 4,
+      "html": 11,
       "build/_app/": 1,
       "build/_app/immutable/": 1,
       "build/_app/immutable/assets/": 1,
@@ -99,8 +99,9 @@
       "build/_app/immutable/entry/": 1,
       "build/_app/immutable/nodes/": 1,
       "json": 11,
+      "ico": 2,
+      "png": 6,
       "build/icons/": 1,
-      "png": 5,
       "webmanifest": 1,
       "js": 3,
       "openspec/": 1,
@@ -145,7 +146,6 @@
       "src/tests/gamification/": 1,
       "src/tests/integration/": 1,
       "static/": 1,
-      "ico": 1,
       "static/icons/": 1
     }
   }
