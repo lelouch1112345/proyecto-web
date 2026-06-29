@@ -294,7 +294,7 @@
         <p class="text-gray-500 text-sm">Complete your first tasks to see progress here.</p>
       {:else}
         <div class="h-48 sm:h-64">
-          <canvas bind:this={xpChartCanvas} />
+          <canvas bind:this={xpChartCanvas}></canvas>
         </div>
       {/if}
     </div>
@@ -306,7 +306,7 @@
         <p class="text-gray-500 text-sm">Complete your first tasks to see progress here.</p>
       {:else}
         <div class="h-48 sm:h-64 flex justify-center">
-          <canvas bind:this={radarChartCanvas} />
+          <canvas bind:this={radarChartCanvas}></canvas>
         </div>
         <!-- Discipline list -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">
@@ -342,7 +342,7 @@
                   <div
                     class="w-3 h-3 rounded-sm {getCellColor(day.count)}"
                     title="{formatDateShort(day.date)}: {day.count} XP"
-                  />
+                  ></div>
                 {/each}
               </div>
             {/each}
@@ -351,11 +351,11 @@
         <!-- Legend -->
         <div class="flex items-center gap-1 mt-3 text-xs text-gray-500 justify-end">
           <span>Less</span>
-          <div class="w-3 h-3 rounded-sm bg-base-300" />
-          <div class="w-3 h-3 rounded-sm bg-red-950" />
-          <div class="w-3 h-3 rounded-sm bg-red-900" />
-          <div class="w-3 h-3 rounded-sm bg-red-800" />
-          <div class="w-3 h-3 rounded-sm bg-red-600" />
+          <div class="w-3 h-3 rounded-sm bg-base-300"></div>
+          <div class="w-3 h-3 rounded-sm bg-red-950"></div>
+          <div class="w-3 h-3 rounded-sm bg-red-900"></div>
+          <div class="w-3 h-3 rounded-sm bg-red-800"></div>
+          <div class="w-3 h-3 rounded-sm bg-red-600"></div>
           <span>More</span>
         </div>
       {/if}
@@ -384,7 +384,7 @@
           </div>
         </div>
         <div class="h-48 sm:h-64">
-          <canvas bind:this={calibrationChartCanvas} />
+          <canvas bind:this={calibrationChartCanvas}></canvas>
         </div>
         <div class="flex gap-4 text-xs text-gray-500 mt-2">
           <span>🔴 Overestimated: {calStats.totalOverestimated}</span>

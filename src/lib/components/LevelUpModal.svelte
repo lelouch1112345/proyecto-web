@@ -6,11 +6,22 @@
     level: number;
     title: string;
     onClose: () => void;
+    open?: boolean;
   }
 
-  let { level, title, onClose }: Props = $props();
+  let { level, title, onClose, open = true }: Props = $props();
 
-  let visible = $state(true);
+  let visible = $state(open);
+  let particles = $state<number[]>([]);
+  let colors = ['#dc2626', '#f97316', '#eab308', '#22c55e', '#3b82f6', '#a855f7'];
+
+  $effect(() => {
+    if (open) {
+      particles = Array.from({ length: 30 }, (_, i) => i);
+      const timer = setTimeout(() => { particles = []; }, 2000);
+      return () => clearTimeout(timer);
+    }
+  });
 
   function handleClose() {
     visible = false;
@@ -19,6 +30,18 @@
 </script>
 
 {#if visible}
+  <!-- Confetti layer -->
+  {#if particles.length}
+    <div class="fixed inset-0 z-40 pointer-events-none overflow-hidden">
+      {#each particles as _, i}
+        <span
+          class="confetti-dot"
+          style="left: {Math.random() * 100}%; top: -5px; background: {colors[i % colors.length]}; animation: confetti-fall 2s ease-out {i * 0.06}s;"
+        ></span>
+      {/each}
+    </div>
+  {/if}
+
   <!-- Backdrop -->
   <div
     class="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
@@ -57,3 +80,12 @@
     </div>
   </div>
 {/if}
+
+<style>
+  .confetti-dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+  }
+</style>

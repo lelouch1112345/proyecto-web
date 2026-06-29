@@ -12,6 +12,15 @@
   let focus = $state(3);
   let mood = $state(3);
   let sleepHrs = $state(7);
+  let showSavedAnim = $state(false);
+
+  $effect(() => {
+    if (saved) {
+      showSavedAnim = true;
+      const t = setTimeout(() => { showSavedAnim = false; }, 1500);
+      return () => clearTimeout(t);
+    }
+  });
 
   const labels: Record<string, string[]> = {
     energy: ['Exhausted', 'Tired', 'Okay', 'Energetic', 'Bursting'],
@@ -40,6 +49,9 @@
   <h3 class="font-bold text-sm mb-3 flex items-center gap-2">
     <span>📋</span>
     <span>Daily Check-In</span>
+    {#if showSavedAnim}
+      <span class="animate-success text-green-400 text-xs">✓ Saved!</span>
+    {/if}
     {#if saved}
       <span class="badge badge-success badge-sm ml-auto">Saved</span>
     {/if}

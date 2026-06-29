@@ -1,41 +1,86 @@
 {
-  "timestamp": 1782606006743,
+  "timestamp": 1782697200000,
   "conventions": [
-    {
-      "id": "naming-snakecase",
-      "category": "naming",
-      "pattern": "snake_case",
-      "description": "Functions and variables use snake_case naming",
-      "confidence": 0.9,
-      "examples": 16,
-      "lastSeen": 1782606006736
-    },
     {
       "id": "naming-camelcase",
       "category": "naming",
       "pattern": "camelCase",
-      "description": "Functions and variables use camelCase naming",
-      "confidence": 0.8776455026455026,
-      "examples": 106,
-      "lastSeen": 1782606006742
+      "description": "Functions and variables use camelCase naming — predominant convention (86 examples, dominates new code)",
+      "confidence": 0.89,
+      "examples": 86,
+      "lastSeen": 1782688970393
+    },
+    {
+      "id": "naming-snakecase-legacy",
+      "category": "naming",
+      "pattern": "snake_case",
+      "description": "Some functions use snake_case naming (16 examples — likely legacy or library-scoped code, NOT the active convention)",
+      "confidence": 0.7,
+      "examples": 16,
+      "lastSeen": 1782688970381
     },
     {
       "id": "error-trycatch",
       "category": "error-handling",
       "pattern": "try-catch",
-      "description": "Uses try-catch blocks for error handling",
+      "description": "Uses try-catch blocks for error handling in async DB and gamification operations",
       "confidence": 0.8,
       "examples": 13,
-      "lastSeen": 1782606006719
+      "lastSeen": 1782688970365
     },
     {
       "id": "export-named",
       "category": "exports",
       "pattern": "named",
-      "description": "Uses named exports exclusively",
-      "confidence": 0.7000000000000001,
-      "examples": 11,
-      "lastSeen": 1782606006740
+      "description": "Uses named exports exclusively (export const foo = ... / export function bar)",
+      "confidence": 0.7,
+      "examples": 15,
+      "lastSeen": 1782688970399
+    },
+    {
+      "id": "framework-sveltekit-static",
+      "category": "framework",
+      "pattern": "adapter-static",
+      "description": "Deploys as static SPA via @sveltejs/adapter-static with prerender enabled",
+      "confidence": 0.95,
+      "examples": 3,
+      "lastSeen": 1782688970399
+    },
+    {
+      "id": "database-dexie-indexeddb",
+      "category": "database",
+      "pattern": "Dexie + IndexedDB",
+      "description": "Client-side storage using Dexie.js wrapper over IndexedDB with typed EntityTables",
+      "confidence": 0.95,
+      "examples": 15,
+      "lastSeen": 1782688970399
+    },
+    {
+      "id": "component-svelte5-runes",
+      "category": "component",
+      "pattern": "Svelte 5 runes",
+      "description": "Uses Svelte 5 runes syntax: $state, $derived, $props for reactive state",
+      "confidence": 0.9,
+      "examples": 18,
+      "lastSeen": 1782688970399
+    },
+    {
+      "id": "styling-tailwind-daisyui",
+      "category": "styling",
+      "pattern": "Tailwind CSS + daisyUI",
+      "description": "UI styled with Tailwind CSS utility classes and daisyUI 5 components (btn, card, badge, etc.)",
+      "confidence": 0.95,
+      "examples": 20,
+      "lastSeen": 1782688970399
+    },
+    {
+      "id": "testing-vitest",
+      "category": "testing",
+      "pattern": "Vitest + fake-indexeddb",
+      "description": "Tests use Vitest with fake-indexeddb for in-memory IndexedDB simulation",
+      "confidence": 0.9,
+      "examples": 10,
+      "lastSeen": 1782688970399
     }
   ]
 }

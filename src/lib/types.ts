@@ -41,7 +41,7 @@ export interface Task {
   difficulty: Difficulty;
   description: string;
   durationMin: number;
-  order: number;
+  order?: number; // Optional — defaults to task index in the day
   category: string; // "reading", "speaking", "listening", "writing", "vocab", "grammar", "theory", "practice", "ear-training"
   detail?: string; // Extended instructions or notes
   links?: string[]; // Resource URLs

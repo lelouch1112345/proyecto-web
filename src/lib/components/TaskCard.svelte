@@ -15,6 +15,15 @@
   let timerRunning = $state(false);
   let timerInterval: ReturnType<typeof setInterval> | undefined;
   let startTime = $state<number | null>(null);
+  let checkTrigger = $state(false);
+
+  $effect(() => {
+    if (completed) {
+      checkTrigger = true;
+      const timer = setTimeout(() => (checkTrigger = false), 200);
+      return () => clearTimeout(timer);
+    }
+  });
 
   const discipline = $derived(DISCIPLINES.find((d) => d.id === task.discipline));
 
@@ -73,9 +82,10 @@
     <button
       class="checkbox checkbox-error mt-1 cursor-pointer {completed ? 'checkbox-success' : ''}"
       class:checked={completed}
+      class:animate-check={checkTrigger}
       onclick={handleToggle}
       aria-label={completed ? 'Unmark task' : 'Mark task complete'}
-    />
+    ></button>
 
     <!-- Content -->
     <div class="flex-1 min-w-0">

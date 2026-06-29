@@ -290,7 +290,7 @@
       <div class="card bg-base-200 border border-red-900/20 p-4">
         <h2 class="text-lg font-bold mb-3">Error Distribution</h2>
         <div class="h-48 sm:h-64">
-          <canvas bind:this={statsChartCanvas} />
+          <canvas bind:this={statsChartCanvas}></canvas>
         </div>
       </div>
     {/if}

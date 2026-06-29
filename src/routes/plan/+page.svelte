@@ -213,7 +213,7 @@
                         <span class="text-xs">{getStatusEmoji(status)}</span>
                       </div>
                     {:else}
-                      <div class="w-full h-10 rounded bg-base-300/50" />
+                      <div class="w-full h-10 rounded bg-base-300/50"></div>
                     {/if}
                   </td>
                 {/each}
@@ -224,12 +224,7 @@
       </div>
 
       <!-- Legend -->
-      <div class="flex flex-wrap gap-4 text-xs text-gray-500">
-        <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-green-800" /> All done</span>
-        <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-yellow-800" /> Partial</span>
-        <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-red-900" /> Missed</span>
-        <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-base-300" /> Future</span>
-        <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-base-300 text-gray-500" /> Rest</span>
+      <div class="flex flex-wrap gap-4 text-xs text-gray-500">          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-green-800"></span> All done</span>          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-yellow-800"></span> Partial</span>          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-red-900"></span> Missed</span>          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-base-300"></span> Future</span>          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-base-300 text-gray-500"></span> Rest</span>
       </div>
 
     {:else}

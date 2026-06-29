@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { fly } from 'svelte/transition';
+
   interface Props {
     onComplete: () => void;
   }
@@ -7,6 +9,7 @@
 
   let step = $state(1);
   let fadeOut = $state(false);
+  let direction = $state(1);
 
   const steps = [
     {
@@ -55,6 +58,7 @@
 
   function next() {
     if (step < 3) {
+      direction = 1;
       step++;
     } else {
       fadeOut = true;
@@ -83,25 +87,27 @@
     </div>
 
     <!-- Content -->
-    <div class="px-6 py-4">
-      <p class="text-sm text-gray-400 mb-4">{currentStep.description}</p>
+    {#key step}
+      <div class="px-6 py-4" transition:fly={{ x: direction * 20, duration: 250 }}>
+        <p class="text-sm text-gray-400 mb-4">{currentStep.description}</p>
 
-      <div class="space-y-3">
-        {#each currentStep.highlights as item}
-          <div class="flex items-start gap-3 p-2.5 bg-base-300/50 rounded-lg">
-            <span class="text-lg shrink-0">{item.emoji}</span>
-            <span class="text-sm text-gray-300">{item.text}</span>
-          </div>
-        {/each}
-      </div>
+        <div class="space-y-3">
+          {#each currentStep.highlights as item}
+            <div class="flex items-start gap-3 p-2.5 bg-base-300/50 rounded-lg">
+              <span class="text-lg shrink-0">{item.emoji}</span>
+              <span class="text-sm text-gray-300">{item.text}</span>
+            </div>
+          {/each}
+        </div>
     </div>
+    {/key}
 
     <!-- Step indicators -->
     <div class="flex justify-center gap-2 py-3">
       {#each steps as _, i}
         <button
           class="w-2 h-2 rounded-full transition-all duration-300 {i + 1 === step ? 'bg-red-500 w-6' : 'bg-gray-600'}"
-          onclick={() => (step = i + 1)}
+          onclick={() => { direction = (i + 1) > step ? 1 : -1; step = i + 1; }}
           aria-label="Step {i + 1}"
         ></button>
       {/each}

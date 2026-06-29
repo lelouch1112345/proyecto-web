@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mascot Spike — Third-Life</title>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.3); }
+    50% { box-shadow: 0 0 0 12px rgba(220, 38, 38, 0); }
+  }
+  @keyframes pop-in {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.15); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .mascot-float { animation: float 3s ease-in-out infinite; }
+  .mascot-glow { animation: pulse-glow 2s ease-in-out infinite; }
+  .dialog-pop { animation: pop-in 0.3s ease-out; }
+  .bubble::after {
+    content: ''; position: absolute; top: 40%; left: -8px;
+    border: 8px solid transparent; border-right-color: var(--bubble-bg, #1e1e2e);
+  }
+  /* Tone colors */
+  .tone-neutral { --bubble-bg: #1e1e2e; }
+  .tone-empathetic { --bubble-bg: #7c3aed; }
+  .tone-energetic { --bubble-bg: #dc2626; }
+</style>
+</head>
+<body class="bg-base-300 min-h-screen">
+  <div class="container mx-auto p-4 max-w-4xl">
+    <div class="card bg-base-100 shadow-xl mb-4">
+      <div class="card-body">
+        <h1 class="card-title text-xl">🐦 Spike: Companion Mascot</h1>
+        <p class="text-sm opacity-70">Probá los distintos estados del mascot — emoji + speech bubble con tono adaptativo</p>
+      </div>
+    </div>
+
+    <!-- Preview Area -->
+    <div class="card bg-base-100 shadow-xl mb-4 min-h-[300px] relative">
+      <div class="card-body">
+        <h2 class="card-title text-sm opacity-50">Dashboard Preview</h2>
+
+        <!-- Simulated dashboard top bar -->
+        <div class="flex gap-2 items-center bg-base-200 p-3 rounded-box mb-4">
+          <span class="badge badge-error">❤️ 5/5</span>
+          <span class="badge badge-warning">🔥 14 days</span>
+          <span class="badge badge-primary">Lv.3</span>
+          <div class="flex-1"></div>
+          <span id="tone-label" class="badge badge-ghost">neutral</span>
+        </div>
+
+        <!-- Mascot -->
+        <div id="mascot-area" class="relative flex items-end justify-end pr-8">
+          <!-- Speech bubble -->
+          <div id="bubble" class="bubble relative bg-base-200 rounded-box p-3 max-w-xs mr-3 shadow-md dialog-pop tone-neutral" style="--bubble-bg: #1e1e2e;">
+            <p id="dialog-text" class="text-sm">Hey! Ready to study?</p>
+          </div>
+          <!-- Character -->
+          <div id="character" class="mascot-float mascot-glow text-5xl cursor-pointer select-none rounded-full bg-base-200 w-20 h-20 flex items-center justify-center shadow-lg">
+            <span id="emoji">🦉</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title text-sm">Estados</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+          <button onclick="setState('neutral')" class="btn btn-outline btn-sm">😐 Neutral</button>
+          <button onclick="setState('greeting')" class="btn btn-outline btn-sm">🌅 Greeting</button>
+          <button onclick="setState('energetic')" class="btn btn-outline btn-sm">🔥 On Fire</button>
+          <button onclick="setState('empathetic')" class="btn btn-outline btn-sm">💜 Empathetic</button>
+          <button onclick="setState('celebrate')" class="btn btn-outline btn-sm">🎉 Level Up!</button>
+          <button onclick="setState('complete')" class="btn btn-outline btn-sm">✅ All Done</button>
+          <button onclick="setState('break')" class="btn btn-outline btn-sm">😴 Break Mode</button>
+          <button onclick="setState('boss')" class="btn btn-outline btn-sm">⚔️ Boss Won</button>
+          <button onclick="setState('streak')" class="btn btn-outline btn-sm">🔥 30-Day Streak</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const states = {
+      neutral:     { emoji: '🦉', tone: 'neutral',     text: 'All quiet. Ready when you are.' },
+      greeting:    { emoji: '🦉', tone: 'neutral',     text: 'Good morning! Ready to learn?' },
+      energetic:   { emoji: '🔥', tone: 'energetic',   text: 'YOU\'RE ON FIRE! Let\'s GOOO!' },
+      empathetic:  { emoji: '💜', tone: 'empathetic',  text: 'Hey... tough day? I\'ve got your back.' },
+      celebrate:   { emoji: '🎉', tone: 'energetic',   text: 'LEVEL UP! You\'re a legend!' },
+      complete:    { emoji: '⭐', tone: 'energetic',   text: 'All tasks done! You\'re crushing it!' },
+      break:       { emoji: '😴', tone: 'empathetic',  text: 'Rest mode activated. Recharge — I\'ll be here.' },
+      boss:        { emoji: '⚔️', tone: 'energetic',   text: 'BOSS DEFEATED! +50 BONUS XP!' },
+      streak:      { emoji: '🔥', tone: 'energetic',   text: '30-DAY STREAK! ABSOLUTELY UNSTOPPABLE!' },
+    };
+
+    function setState(key) {
+      const s = states[key];
+      document.getElementById('emoji').textContent = s.emoji;
+      document.getElementById('dialog-text').textContent = s.text;
+      document.getElementById('tone-label').textContent = s.tone;
+      document.getElementById('tone-label').className = `badge badge-${s.tone === 'energetic' ? 'error' : s.tone === 'empathetic' ? 'secondary' : 'ghost'}`;
+
+      const bubble = document.getElementById('bubble');
+      bubble.className = `bubble relative bg-base-200 rounded-box p-3 max-w-xs mr-3 shadow-md dialog-pop tone-${s.tone}`;
+      bubble.style.setProperty('--bubble-bg', s.tone === 'energetic' ? '#dc2626' : s.tone === 'empathetic' ? '#7c3aed' : '#1e1e2e');
+
+      const char = document.getElementById('character');
+      char.style.animation = 'none';
+      void char.offsetHeight;
+      char.style.animation = 'pop-in 0.3s ease-out, float 3s ease-in-out infinite';
+    }
+  </script>
+</body>
+</html>

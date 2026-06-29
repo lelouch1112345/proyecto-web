@@ -1,12 +1,30 @@
 <script lang="ts">
   import type { BossBattle } from '$lib/types';
+  import { t } from '$lib/i18n';
+  import type { Tone } from '$lib/i18n';
 
   interface Props {
     battle: BossBattle | null;
     onStart?: () => void;
+    tone?: Tone;
   }
 
-  let { battle, onStart }: Props = $props();
+  let { battle, onStart, tone = 'neutral' }: Props = $props();
+
+  let showResult = $state(false);
+  let prevCompleted = $state<boolean | undefined>(undefined);
+
+  $effect(() => {
+    if (battle) {
+      if (prevCompleted !== undefined && battle.completed !== prevCompleted && battle.completed) {
+        showResult = true;
+        setTimeout(() => { showResult = false; }, 400);
+      }
+      prevCompleted = battle.completed;
+    } else {
+      prevCompleted = undefined;
+    }
+  });
 </script>
 
 <div class="card bg-base-200 border border-red-900/20 p-4">
@@ -16,9 +34,9 @@
       <span>Weekly Boss Battle</span>
     </h3>
     {#if battle?.completed}
-      <span class="badge badge-success badge-sm">Won</span>
+      <span class="badge badge-success badge-sm" class:animate-pop-in={showResult}>Won</span>
     {:else if battle && !battle.completed}
-      <span class="badge badge-warning badge-sm">Lost</span>
+      <span class="badge badge-warning badge-sm" class:animate-pop-in={showResult}>Lost</span>
     {:else}
       <span class="badge badge-ghost badge-sm">Ready</span>
     {/if}
@@ -36,11 +54,11 @@
         <div
           class="h-2 rounded-full transition-all {battle.completed ? 'bg-green-600' : 'bg-red-600'}"
           style="width: {battle.totalTasks > 0 ? (battle.tasksCompleted / battle.totalTasks) * 100 : 0}%"
-        />
+        ></div>
       </div>
       <div class="flex justify-between text-xs">
         <span class="text-gray-500">
-          {battle.completed ? '✅ Passed!' : battle.tasksCompleted > 0 ? 'Keep going!' : 'Not yet'}
+          {battle.completed ? t('boss.passed', tone) : battle.tasksCompleted > 0 ? t('boss.keep_going', tone) : t('boss.waiting', tone)}
         </span>
         <span class="text-gold-400">{battle.xpMultiplier}× XP</span>
       </div>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { fly } from 'svelte/transition';
   import { planRepo, resultRepo } from '$lib/db';
   import { heartRepo, streakRepo } from '$lib/db/repositories/hearts';
   import { achievementRepo } from '$lib/db';
@@ -13,6 +14,8 @@
   import { genId, today, now } from '$lib/utils/id';
   import { base } from '$app/paths';
 
+  import { deriveTone, t } from '$lib/i18n';
+  import type { UserSignals } from '$lib/i18n';
   import HeartDisplay from '$lib/components/HeartDisplay.svelte';
   import StreakBadge from '$lib/components/StreakBadge.svelte';
   import XpBar from '$lib/components/XpBar.svelte';
@@ -21,6 +24,7 @@
   import LevelUpModal from '$lib/components/LevelUpModal.svelte';
   import BossBattleWidget from '$lib/components/BossBattleWidget.svelte';
   import EmptyState from '$lib/components/EmptyState.svelte';
+  import PomodoroTimer from '$lib/components/PomodoroTimer.svelte';
 
   // ─── State ───
   let currentDay = $state<Day | null>(null);
@@ -36,10 +40,28 @@
   let error = $state<string | null>(null);
   let newLevel = $state<{ level: number; title: string } | null>(null);
   let xpAnimation = $state(0);
+  let showTimer = $state(false);
+  let timerFocusMinutes = $state(40);
 
   // ─── Derived ───
   const levelData = $derived(getLevelData(totalXp));
   const todayDate = $derived(today());
+
+  // Adaptive tone from user signals
+  const tone = $derived(deriveTone({
+    streak: streak?.current ?? 0,
+    hearts: hearts
+      ? { current: hearts.current, breakMode: hearts.breakMode }
+      : { current: 3, breakMode: false },
+    totalXp,
+    level: levelData.level,
+    completionRatio: currentDay
+      ? completedTaskIds.size / Math.max(currentDay.tasks.length, 1)
+      : 0,
+    battleWon: bossBattle?.completed,
+    levelUpAchievements: levelUpAchievements.map((a) => a.id),
+    missedDays: 0,
+  } satisfies UserSignals));
 
   // ─── Group tasks by discipline ───
   const disciplines = $derived(DISCIPLINES);
@@ -89,6 +111,12 @@
         achievements = initial;
       } else {
         achievements = savedAchievements;
+      }
+
+      // Load default timer duration from settings
+      const settings = await settingsRepo.get();
+      if (settings?.sessionTimerDefault) {
+        timerFocusMinutes = settings.sessionTimerDefault;
       }
 
       // Load completed tasks for today
@@ -248,14 +276,14 @@
     <span class="loading loading-spinner loading-lg text-red-500"></span>
   </div>
 {:else if error}
-  <EmptyState icon="&#9888;&#65039;" title="No Plan Loaded" description={error} action={{ label: 'Go to Settings', href: '/settings' }} />
+  <EmptyState icon="&#9888;&#65039;" title="No Plan Loaded" description={error} {tone} action={{ label: 'Go to Settings', href: '/settings' }} />
 {:else if currentDay}
   <div class="space-y-4">
     <!-- XP Animation Toast -->
     {#if xpAnimation > 0}
-      <div class="fixed top-4 right-4 z-40 animate-bounce">
+      <div class="fixed top-4 right-4 z-40" transition:fly={{ x: 100, duration: 300 }}>
         <div class="bg-red-800 text-red-200 px-4 py-2 rounded-lg shadow-lg text-sm font-bold">
-          +{xpAnimation} XP
+          {t('xp.toast', tone, String(xpAnimation))}
         </div>
       </div>
     {/if}
@@ -276,30 +304,61 @@
     <div class="card bg-base-200 border border-red-900/20 p-3">
       <div class="flex flex-wrap items-center gap-3">
         {#if hearts}
-          <HeartDisplay current={hearts.current} max={hearts.max} breakMode={hearts.breakMode} />
+          <HeartDisplay current={hearts.current} max={hearts.max} breakMode={hearts.breakMode} {tone} />
         {/if}
-        <div class="divider divider-horizontal mx-0 hidden sm:flex" />
+        <div class="divider divider-horizontal mx-0 hidden sm:flex"></div>
         {#if streak}
-          <StreakBadge current={streak.current} longest={streak.longest} freezeAvailable={streak.freezeAvailable} />
+          <StreakBadge current={streak.current} longest={streak.longest} freezeAvailable={streak.freezeAvailable} {tone} />
         {/if}
         <div class="flex-1 min-w-[200px]">
-          <XpBar totalXp={totalXp} compact />
+          <XpBar totalXp={totalXp} compact {tone} />
         </div>
         <div class="text-xs text-gray-500 font-mono">
-          Lv.{levelData.level}
+          {t('xpbar.level', tone, String(levelData.level), '')}
         </div>
       </div>
     </div>
 
+    <!-- Pomodoro Timer (collapsible) -->
+    <div class="card bg-base-200 border border-red-900/20 p-3">
+      <button
+        class="flex items-center justify-between w-full text-left"
+        onclick={() => (showTimer = !showTimer)}
+      >
+        <div class="flex items-center gap-2">
+          <span class="text-lg">⏱️</span>
+          <span class="font-bold text-sm">Focus Timer</span>
+          {#if showTimer}
+            <span class="text-xs text-gray-500">(click to hide)</span>
+          {:else}
+            <span class="text-xs text-gray-500">(click to show)</span>
+          {/if}
+        </div>
+        <span class="text-gray-500">{showTimer ? '▲' : '▼'}</span>
+      </button>
+      {#if showTimer}
+        <div class="mt-2 pt-2 border-t border-red-900/20">
+          <PomodoroTimer
+            focusMinutes={timerFocusMinutes}
+            breakMinutes={5}
+            onSessionComplete={(minutes) => {
+              // Optionally log completed focus sessions
+              console.log(`Focus session completed: ${minutes} min`);
+            }}
+          />
+        </div>
+      {/if}
+    </div>
+
     <!-- Boss Battle (Sunday) -->
     {#if bossBattle}
-      <BossBattleWidget battle={bossBattle} />
+      <BossBattleWidget battle={bossBattle} {tone} />
     {/if}
 
     <!-- Tasks By Discipline -->
     {#if currentDay.tasks.length === 0}
       <div class="card bg-base-200 border border-red-900/20 p-8 text-center">
-        <p class="text-xl text-gray-400">No tasks scheduled — enjoy your rest</p>
+        <p class="text-xl text-gray-400">{t('dashboard.empty', tone)}</p>
       </div>
     {:else}
       {#each groupedTasks() as group}
@@ -339,7 +398,7 @@
     </div>
   </div>
 {:else}
-  <EmptyState icon="&#128203;" title="No tasks scheduled" description="Enjoy your rest day!" action={{ label: 'Go to Plan', href: `${base}/plan` }} />
+  <EmptyState icon="&#128203;" title={t('dashboard.empty', tone)} description="Rest up — tomorrow is a new day" {tone} action={{ label: 'Go to Plan', href: `${base}/plan` }} />
 {/if}
 
 <!-- Level Up Modal -->

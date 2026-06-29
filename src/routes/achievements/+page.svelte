@@ -1,14 +1,23 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { base } from '$app/paths';
-  import { achievementRepo } from '$lib/db';
-  import type { Achievement } from '$lib/types';
+  import { achievementRepo, resultRepo } from '$lib/db';
+  import { heartRepo, streakRepo } from '$lib/db/repositories/hearts';
+  import type { Achievement, Hearts, Streak } from '$lib/types';
   import { ACHIEVEMENT_DEFINITIONS } from '$lib/constants';
+
+  import { deriveTone, t } from '$lib/i18n';
+  import type { UserSignals } from '$lib/i18n';
 
   let achievements = $state<Achievement[]>([]);
   let loading = $state(true);
   let sortMode = $state<'recent' | 'progress' | 'locked'>('recent');
   let newlyUnlocked = $state<Set<string>>(new Set());
+
+  // Data for tone derivation
+  let hearts = $state<Hearts | null>(null);
+  let streak = $state<Streak | null>(null);
+  let totalXp = $state(0);
 
   onMount(async () => {
     try {
@@ -31,9 +40,23 @@
       }
     } catch (e) {
       console.error('Failed to load achievements:', e);
-    } finally {
-      loading = false;
     }
+
+    // Load user signals for tone derivation
+    try {
+      hearts = (await heartRepo.getState()) ?? null;
+      streak = (await streakRepo.getState()) ?? null;
+    } catch (e) {
+      console.error('Failed to load user state for tone:', e);
+    }
+
+    try {
+      totalXp = await resultRepo.getTotalXp();
+    } catch (e) {
+      console.error('Failed to load total XP:', e);
+    }
+
+    loading = false;
   });
 
   const sortedAchievements = $derived(() => {
@@ -67,6 +90,25 @@
     }
     return sorted;
   });
+
+  // Average achievement progress as a proxy for completion ratio
+  const avgProgress = $derived(
+    achievements.length > 0
+      ? achievements.reduce((sum, a) => sum + (a.progress ?? 0), 0) / achievements.length / 100
+      : 0
+  );
+
+  // Adaptive tone from available user signals
+  const tone = $derived(deriveTone({
+    streak: streak?.current ?? 0,
+    hearts: hearts
+      ? { current: hearts.current, breakMode: hearts.breakMode }
+      : { current: 3, breakMode: false },
+    totalXp,
+    level: 0,
+    completionRatio: avgProgress,
+    missedDays: 0,
+  } satisfies UserSignals));
 
   function getConditionText(achievement: Achievement): string {
     const { type, target, discipline } = achievement.condition;
@@ -117,7 +159,7 @@
   {:else if achievements.length === 0}
     <div class="flex flex-col items-center justify-center h-64 text-center">
       <div class="text-6xl mb-4">&#127942;</div>
-      <p class="text-gray-400 text-lg">Complete your first tasks to earn achievements!</p>
+      <p class="text-gray-400 text-lg">{t('achievements.empty', tone)}</p>
       <a href={base} class="btn btn-outline btn-error mt-4">Go to Dashboard</a>
     </div>
   {:else}
@@ -138,13 +180,14 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      {#each sortedAchievements() as achievement}
+      {#each sortedAchievements() as achievement, index}
         <div
-          class="card bg-base-200 border p-4 transition-all duration-500
+          class="card bg-base-200 border p-4 transition-all duration-500 card-enter
             {achievement.unlocked
               ? 'border-yellow-600/50 shadow-lg shadow-yellow-900/20 achievement-unlocked'
               : 'border-red-900/20 opacity-60'}
             {newlyUnlocked.has(achievement.id) ? 'achievement-new' : ''}"
+          style="--i: {index}"
         >
           <div class="flex items-center gap-3 mb-2">
             <span class="text-3xl">{achievement.icon}</span>
@@ -162,16 +205,17 @@
 
           <!-- Condition text for locked achievements -->
           {#if !achievement.unlocked}
-            <p class="text-xs text-gray-500 italic mt-1">{getConditionText(achievement)}</p>
+            <p class="text-xs text-gray-500 italic mt-1">{t('achievements.condition', tone, getConditionText(achievement))}</p>
           {/if}
 
           <!-- Progress bar -->
           {#if achievement.progress !== undefined && achievement.progress > 0 && achievement.progress < 100}
+            {@const currentCount = String(Math.round(achievement.condition.target * (achievement.progress / 100)))}
             <div class="mt-2">
               <div class="w-full bg-base-300 rounded-full h-1.5">
                 <div class="bg-red-500 h-1.5 rounded-full transition-all duration-500" style="width: {achievement.progress}%"></div>
               </div>
-              <span class="text-xs text-gray-500 mt-0.5 block">{achievement.progress}%</span>
+              <span class="text-xs text-gray-500 mt-0.5 block">{t('achievements.progress', tone, currentCount, String(achievement.condition.target))}</span>
             </div>
           {:else if !achievement.unlocked}
             <div class="mt-2">
@@ -195,13 +239,8 @@
 </div>
 
 <style>
-  @keyframes unlockPulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.4); }
-    50% { transform: scale(1.03); box-shadow: 0 0 20px 10px rgba(234, 179, 8, 0.2); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); }
-  }
   .achievement-new {
-    animation: unlockPulse 2s ease-in-out 2;
+    animation: glow-pulse 2s ease-in-out 2;
     border-color: #eab308 !important;
   }
   .achievement-unlocked {
@@ -209,5 +248,9 @@
   }
   .achievement-unlocked:hover {
     transform: translateY(-2px);
+  }
+  .card-enter {
+    animation: slide-up 0.3s ease-out both;
+    animation-delay: calc(var(--i) * 50ms);
   }
 </style>

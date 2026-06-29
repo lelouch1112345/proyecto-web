@@ -1,13 +1,16 @@
 <script lang="ts">
   import { getLevel, getLevelProgress } from '$lib/gamification/xp';
+  import { t } from '$lib/i18n';
+  import type { Tone } from '$lib/i18n';
 
   interface Props {
     totalXp: number;
     animate?: boolean;
     compact?: boolean;
+    tone?: Tone;
   }
 
-  let { totalXp, animate = true, compact = false }: Props = $props();
+  let { totalXp, animate = true, compact = false, tone = 'neutral' }: Props = $props();
 
   let animating = $state(false);
   let prevXp = $state(totalXp);
@@ -29,17 +32,16 @@
 <div class="w-full" class:compact>
   <div class="flex items-center justify-between mb-1">
     <span class="text-sm font-bold">
-      <span class="text-gold-400">Lv.{level.level}</span>
-      <span class="text-gray-400 ml-1">{level.title}</span>
+      {t('xpbar.level', tone, String(level.level), level.title)}
     </span>
     <span class="text-xs text-gray-500">{totalXp} XP</span>
   </div>
   <div class="w-full bg-base-300 rounded-full h-{compact ? '1.5' : '2.5'} overflow-hidden">
     <div
       class="bg-gradient-to-r from-red-700 to-red-500 h-full rounded-full transition-all duration-500 ease-out"
-      class:animate-pulse={animating}
+      class:animate-glow={animating}
       style="width: {progress}%"
-    />
+    ></div>
   </div>
   {#if !compact}
     <div class="flex justify-between mt-0.5">

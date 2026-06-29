@@ -1,0 +1,121 @@
+# Instincts — proyecto-web
+# Auto-aprendido del historial de sesiones del proyecto
+# Formato: instinct-model v2.1 (continuous-learning)
+# Generado: 2026-06-28
+
+## Code Style
+
+### instinct: prefer-camelcase
+trigger: "when naming functions or variables"
+action: "Use camelCase naming"
+confidence: 0.89
+evidence: "86 examples in project; snake_case has only 16 examples (likely library/config code)"
+scope: project
+
+### instinct: prefer-named-exports
+trigger: "when exporting modules"
+action: "Use named exports (export const / export function) — no default exports"
+confidence: 0.7
+evidence: "15 consistent examples across all modules"
+scope: project
+
+### instinct: use-try-catch
+trigger: "when handling async errors"
+action: "Wrap in try-catch blocks"
+confidence: 0.8
+evidence: "13 examples across repositories and gamification modules"
+scope: project
+
+## SvelteKit
+
+### instinct: run-sync-before-build
+trigger: "before npm run build"
+action: "Run 'npx svelte-kit sync' first to generate adapter types"
+confidence: 0.9
+evidence: "Adapter-static not found if sync is skipped — multiple build failures"
+scope: project
+
+### instinct: use-resolveroute
+trigger: "when generating route paths"
+action: "Use resolveRoute from $app/paths instead of deprecated 'base' import"
+confidence: 0.9
+evidence: "'base' is deprecated in SvelteKit 2.x — caused repeated type warnings"
+scope: project
+
+### instinct: configure-prerender-httperror
+trigger: "when building static site (adapter-static)"
+action: "Set prerender.handleHttpError to 'warn' in svelte.config.js"
+confidence: 0.9
+evidence: "Build fails on missing pages during prerender if not configured"
+scope: project
+
+### instinct: a11y-button-labels
+trigger: "when creating icon-only buttons"
+action: "Add aria-label attribute to buttons without visible text"
+confidence: 0.85
+evidence: "Svelte 5 strict a11y: 'a11y_consider_explicit_label' warnings"
+scope: project
+
+## PWA
+
+### instinct: inline-favicon-data-uri
+trigger: "when setting up PWA favicon"
+action: "Use inline data URI for favicon to avoid Firefox CSP issues"
+confidence: 0.85
+evidence: "Firefox internal FaviconLoader ignores CSP headers and triggers errors"
+scope: project
+
+## Tool Workflow
+
+### instinct: skip-markdown-type-checks
+trigger: "when reading Plan_de_Estudio/*.md files"
+action: "Do not treat as code — these are educational markdown files with embedded examples"
+confidence: 0.95
+evidence: "304 false-positive type errors logged from reading these files"
+scope: project
+
+### instinct: prevent-memory-exhaustion
+trigger: "after ~20 tool calls or 5 exploratory file reads"
+action: "Spawn context-pruner agent to manage session context size"
+confidence: 0.85
+evidence: "20 memory exhaustion events in session history"
+scope: global
+
+### instinct: maintain-yaml-column-alignment
+trigger: "when editing openspec/config.yaml"
+action: "Ensure all mapping keys start at the same column — YAML enforces consistent indentation"
+confidence: 0.85
+evidence: "82 YAML indentation errors from misaligned mapping keys in openspec/config.yaml"
+scope: project
+
+### instinct: dont-duplicate-plugin-hooks
+trigger: "when configuring Claude Code hooks"
+action: "Do not add PreToolUse/PostToolUse hooks in settings.json if plugin manages them"
+confidence: 0.9
+evidence: "Plugin hook duplication causes double execution and path resolution errors"
+scope: global
+
+### instinct: let-basher-install-packages
+trigger: "when adding a new npm package"
+action: "Use basher agent to run 'npm install <pkg>' instead of manually editing package.json"
+confidence: 0.85
+evidence: "14 package manager errors from incorrect version numbers in package.json"
+scope: global
+
+## Dexie / IndexedDB
+
+### instinct: bump-db-version
+trigger: "when modifying schema.ts (add/remove tables)"
+action: "Increment the Dexie database version number"
+confidence: 0.85
+evidence: "Schema changes without version bump cause silent database corruption"
+scope: project
+
+## Git
+
+### instinct: no-verify-for-denohooks
+trigger: "when committing and pre-commit hook uses deno"
+action: "Use git commit --no-verify if deno can't resolve vitest imports"
+confidence: 0.8
+evidence: "Pre-commit hook fails on vitest imports — deno doesn't understand project's type system"
+scope: project

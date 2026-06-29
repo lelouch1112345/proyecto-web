@@ -1,7 +1,9 @@
 <script lang="ts">
   import '../app.css';
   import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import { isSeeded, importSeedData } from '$lib/db/repositories';
   import { registerSW } from 'virtual:pwa-register';
 
@@ -206,7 +208,11 @@
     </nav>
 
     <main class="p-4 max-w-5xl mx-auto">
-      {@render children()}
+      {#key $page.url.pathname}
+        <div transition:fade={{ duration: 200 }}>
+          {@render children()}
+        </div>
+      {/key}
     </main>
   {/if}
 </div>
